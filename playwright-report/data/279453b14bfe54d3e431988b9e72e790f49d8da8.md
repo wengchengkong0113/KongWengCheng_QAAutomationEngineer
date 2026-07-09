@@ -1,0 +1,2203 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: search.spec.ts >> Search function >> user can search a destination with dates and guests
+- Location: tests\search.spec.ts:21:7
+
+# Error details
+
+```
+Error: The "Select dates" panel did not render any [data-date] cells within 10s of clicking the search-overview trigger. Check test-results/calendar-not-visible.png and test-results/panel-after-search-overview.html.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e5] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e7]:
+    - banner [ref=e21]:
+      - generic [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Booking.com" [ref=e27] [cursor=pointer]:
+            - /url: https://www.booking.com/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+            - img [ref=e28]
+          - generic [ref=e30]:
+            - button "Prices in Malaysian Ringgit" [ref=e32] [cursor=pointer]:
+              - generic [ref=e33]: MYR
+            - 'button "Language: English (US)" [ref=e35] [cursor=pointer]'
+            - link "Customer support" [ref=e40] [cursor=pointer]:
+              - /url: https://secure.booking.com/help.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b&source=header&src=profile_contact_cs
+              - img [ref=e43]
+            - link "List your property" [ref=e45] [cursor=pointer]:
+              - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&lang=en-us&sid=178e14739de13acdb781dba1eac7bb1b&utm_medium=frontend&utm_source=topbar
+              - generic [ref=e46]: List your property
+            - link "Register an account" [ref=e47] [cursor=pointer]:
+              - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UtcBZqVuIOoLgfkjRNbtifUabXfhKYFi2fyacanwjfMBMe67O2kTmFeE_shEZzzoeSqtwXbXFf0Njmk6_MwzybZAfz3psVYr5ZC_nBn0GUzivlHEk4CU5ZjjN27kc6Wx9d0D5eXhunj_EjZ4G3ba1wXfNrWiTsiOJL1bzMMLIzbco6SQRaSy48p2StojdxCUPQLn_8IMZ-2T31Og2asprbthy-xfQIMwEydxbswRLNOJ6Vd-HNo7ezJom_p1foOVWexSM-Yru9INKGPKm2ghV68SLyETfLUmowY%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+              - generic [ref=e48]: Register
+            - link "Sign in" [ref=e50] [cursor=pointer]:
+              - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UtcBZqVuIOoLgfkjRNbtifUabXfhKYFi2fyacanwjfMBMe67O2kTmFeE_shEZzzoeSqtwXbXFf0Njmk6_MwzybZAfz3psVYr5ZC_nBn0GUzivlHEk4CU5ZjjN27kc6Wx9d0D5eXhunj_EjZ4G3ba1wXfNrWiTsiOJL1bzMMLIzbco6SQRaSy48p2StojdxCUPQLn_8IMZ-2T31Og2asprbthy-xfQIMwEydxbswRLNOJ6Vd-HNo7ezJom_p1foOVWexSM-Yru9INKGPKm2ghV68SLyETfLUmowY%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+              - generic [ref=e51]: Sign in
+        - navigation "What are you looking for?" [ref=e52]:
+          - menubar [ref=e54]:
+            - menuitem "Stays" [ref=e55] [cursor=pointer]:
+              - generic [ref=e56]:
+                - img [ref=e58]
+                - generic [ref=e60]: Stays
+            - menuitem "Flights" [ref=e61] [cursor=pointer]:
+              - generic [ref=e62]:
+                - img [ref=e64]
+                - generic [ref=e66]: Flights
+            - menuitem "Flight + Hotel" [ref=e67] [cursor=pointer]:
+              - generic [ref=e68]:
+                - img [ref=e70]
+                - generic [ref=e72]: Flight + Hotel
+            - menuitem "Car rental" [ref=e73] [cursor=pointer]:
+              - generic [ref=e74]:
+                - img [ref=e76]
+                - generic [ref=e78]: Car rental
+            - menuitem "Attractions" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]:
+                - img [ref=e82]
+                - generic [ref=e84]: Attractions
+            - menuitem "Airport taxis" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]:
+                - img [ref=e88]
+                - generic [ref=e90]: Airport taxis
+    - main [ref=e91]:
+      - generic [ref=e100]:
+        - generic [ref=e107]:
+          - heading "Find your next stay" [level=1] [ref=e109]:
+            - generic [ref=e110]: Find your next stay
+          - paragraph [ref=e111]: Search deals on hotels, homes, and much more...
+        - region "Search properties" [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e123]:
+              - img [ref=e126]
+              - combobox "Where are you going?" [ref=e128]: Kuala Lumpur, Kuala Lumpur Federal Territory, Malaysia
+              - button "Clear" [ref=e130] [cursor=pointer]:
+                - img "Clear" [ref=e131]:
+                  - img [ref=e132]
+            - button "Check-in date — Check-out date" [active] [ref=e136] [cursor=pointer]:
+              - generic [ref=e137]:
+                - img [ref=e139]
+                - generic [ref=e141]: Check-in date — Check-out date
+            - 'button "Number of travelers and rooms. Currently selected: 2 adults · 0 children · 1 room" [ref=e144] [cursor=pointer]':
+              - generic [ref=e145]:
+                - img [ref=e147]
+                - generic [ref=e149]: 2 adults · 0 children · 1 room
+              - img [ref=e151]
+            - button "Search" [ref=e154] [cursor=pointer]:
+              - generic [ref=e155]: Search
+          - group [ref=e156]:
+            - generic [ref=e157]:
+              - checkbox "I'm looking for an entire home or apartment" [ref=e158]
+              - generic [ref=e159] [cursor=pointer]:
+                - img [ref=e162]
+                - generic [ref=e165]: I'm looking for an entire home or apartment
+            - generic [ref=e166]:
+              - checkbox "I'm traveling for work" [ref=e167]
+              - generic [ref=e168] [cursor=pointer]:
+                - img [ref=e171]
+                - generic [ref=e174]: I'm traveling for work
+            - generic [ref=e175]:
+              - checkbox "Add flights to my search" [ref=e176]
+              - generic [ref=e177] [cursor=pointer]:
+                - img [ref=e180]
+                - generic [ref=e183]: Add flights to my search
+      - generic [ref=e188]:
+        - generic [ref=e196]:
+          - generic [ref=e198]: Why Booking.com?
+          - generic [ref=e199]:
+            - heading "Book now, pay at the property" [level=3] [ref=e201]
+            - paragraph [ref=e202]: FREE cancellation on most rooms
+          - generic [ref=e203]:
+            - heading "300M+ reviews from fellow travelers" [level=3] [ref=e205]
+            - paragraph [ref=e206]: Get trusted information from guests like you
+          - generic [ref=e207]:
+            - heading "2+ million properties worldwide" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Hotels, guest houses, apartments, and more…
+          - generic [ref=e211]:
+            - heading "Trusted 24/7 customer service you can rely on" [level=3] [ref=e213]
+            - paragraph [ref=e214]: We're always here to help
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - heading "Offers" [level=2] [ref=e224]
+            - generic [ref=e225]: Promotions, deals, and special offers for you
+          - generic [ref=e230]:
+            - generic [ref=e232]:
+              - generic [ref=e233]: Escape for less with our Getaway Deals
+              - heading "No catch. Just getaways." [level=3] [ref=e234]
+              - generic [ref=e235]: At least 15% off select stays worldwide – just book and go.
+              - link "Save with a Getaway Deal - Save on your next trip with at least 15% off select stays" [ref=e238] [cursor=pointer]:
+                - /url: https://www.booking.com/dealspage.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&campaign_id=getaway
+                - generic [ref=e239]: Save with a Getaway Deal
+            - img "A beach scene in Maui, Hawaii, with travelers walking and relaxing by the ocean on a sunny day." [ref=e243]
+        - generic [ref=e252]:
+          - generic [ref=e258]:
+            - heading "Browse by property type" [level=2] [ref=e263]
+            - generic [ref=e264]:
+              - region "Browse by property type" [ref=e265]:
+                - group [ref=e266]:
+                  - link "Hotels" [ref=e267] [cursor=pointer]:
+                    - /url: https://www.booking.com/hotel/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Hotels" [level=3] [ref=e272]
+                - group [ref=e273]:
+                  - link "Apartments" [ref=e274] [cursor=pointer]:
+                    - /url: https://www.booking.com/apartments/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Apartments" [level=3] [ref=e279]
+                - group [ref=e280]:
+                  - link "Resorts" [ref=e281] [cursor=pointer]:
+                    - /url: https://www.booking.com/resorts/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Resorts" [level=3] [ref=e286]
+                - group [ref=e287]:
+                  - link "Villas" [ref=e288] [cursor=pointer]:
+                    - /url: https://www.booking.com/villas/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Villas" [level=3] [ref=e293]
+                - group [ref=e294]:
+                  - link "Cabins" [ref=e295] [cursor=pointer]:
+                    - /url: https://www.booking.com/chalet/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Cabins" [level=3] [ref=e300]
+                - group [ref=e301]:
+                  - link "Cottages" [ref=e302] [cursor=pointer]:
+                    - /url: https://www.booking.com/cottages/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Cottages" [level=3] [ref=e307]
+                - group [ref=e308]:
+                  - link "Glamping Sites" [ref=e309] [cursor=pointer]:
+                    - /url: https://www.booking.com/glamping/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Glamping Sites" [level=3] [ref=e314]
+                - group [ref=e315]:
+                  - link "Serviced apartments" [ref=e316] [cursor=pointer]:
+                    - /url: https://www.booking.com/aparthotels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Serviced apartments" [level=3] [ref=e321]
+                - group [ref=e322]:
+                  - link "Vacation Homes" [ref=e323] [cursor=pointer]:
+                    - /url: https://www.booking.com/holiday-homes/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Vacation Homes" [level=3] [ref=e328]
+                - group [ref=e329]:
+                  - link "Guest Houses" [ref=e330] [cursor=pointer]:
+                    - /url: https://www.booking.com/guest-house/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Guest Houses" [level=3] [ref=e335]
+                - group [ref=e336]:
+                  - link "Hostels" [ref=e337] [cursor=pointer]:
+                    - /url: https://www.booking.com/hostels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Hostels" [level=3] [ref=e342]
+                - group [ref=e343]:
+                  - link "Motels" [ref=e344] [cursor=pointer]:
+                    - /url: https://www.booking.com/motels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Motels" [level=3] [ref=e349]
+                - group [ref=e350]:
+                  - link "B&Bs" [ref=e351] [cursor=pointer]:
+                    - /url: https://www.booking.com/bed-and-breakfast/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "B&Bs" [level=3] [ref=e356]
+                - group [ref=e357]:
+                  - link "Ryokans" [ref=e358] [cursor=pointer]:
+                    - /url: https://www.booking.com/ryokans/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Ryokans" [level=3] [ref=e363]
+                - group [ref=e364]:
+                  - link "Riads" [ref=e365] [cursor=pointer]:
+                    - /url: https://www.booking.com/riad/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Riads" [level=3] [ref=e370]
+                - group [ref=e371]:
+                  - link "Resort Villages" [ref=e372] [cursor=pointer]:
+                    - /url: https://www.booking.com/holiday-parks/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Resort Villages" [level=3] [ref=e377]
+                - group [ref=e378]:
+                  - link "Homestays" [ref=e379] [cursor=pointer]:
+                    - /url: https://www.booking.com/homestay/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Homestays" [level=3] [ref=e384]
+                - group [ref=e385]:
+                  - link "Campgrounds" [ref=e386] [cursor=pointer]:
+                    - /url: https://www.booking.com/campings/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Campgrounds" [level=3] [ref=e391]
+                - group [ref=e392]:
+                  - link "Country Houses" [ref=e393] [cursor=pointer]:
+                    - /url: https://www.booking.com/country-houses/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Country Houses" [level=3] [ref=e398]
+                - group [ref=e399]:
+                  - link "Farm stays" [ref=e400] [cursor=pointer]:
+                    - /url: https://www.booking.com/farm-holidays/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Farm stays" [level=3] [ref=e405]
+                - group [ref=e406]:
+                  - link "Boats" [ref=e407] [cursor=pointer]:
+                    - /url: https://www.booking.com/boats/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Boats" [level=3] [ref=e412]
+                - group [ref=e413]:
+                  - link "Luxury Tents" [ref=e414] [cursor=pointer]:
+                    - /url: https://www.booking.com/camp/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Luxury Tents" [level=3] [ref=e419]
+                - group [ref=e420]:
+                  - link "Self-Catering Accommodations" [ref=e421] [cursor=pointer]:
+                    - /url: https://www.booking.com/self-catering/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Self-Catering Accommodations" [level=3] [ref=e426]
+                - group [ref=e427]:
+                  - link "Tiny Houses" [ref=e428] [cursor=pointer]:
+                    - /url: https://www.booking.com/tiny-house/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                    - heading "Tiny Houses" [level=3] [ref=e433]
+              - 'button "Next: Browse by property type" [ref=e434] [cursor=pointer]':
+                - img [ref=e437]
+          - generic [ref=e442]:
+            - generic [ref=e444]:
+              - heading "Trending destinations" [level=2] [ref=e445]
+              - generic [ref=e446]: Most popular choices for travelers from Malaysia
+            - generic [ref=e447]:
+              - link "Kuala Lumpur, Malaysia" [ref=e448] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403010&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e451]:
+                  - text: Kuala Lumpur
+                  - img "Malaysia" [ref=e453]
+              - link "Malacca, Malaysia" [ref=e454] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403412&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e457]:
+                  - text: Malacca
+                  - img "Malaysia" [ref=e459]
+            - generic [ref=e460]:
+              - link "Johor Bahru, Malaysia" [ref=e461] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2405456&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e464]:
+                  - text: Johor Bahru
+                  - img "Malaysia" [ref=e466]
+              - link "Ipoh, Malaysia" [ref=e467] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403538&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e470]:
+                  - text: Ipoh
+                  - img "Malaysia" [ref=e472]
+              - link "Kota Kinabalu, Malaysia" [ref=e473] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2404760&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e476]:
+                  - text: Kota Kinabalu
+                  - img "Malaysia" [ref=e478]
+          - generic [ref=e484]:
+            - generic [ref=e487]:
+              - heading "Quick and easy trip planner" [level=2] [ref=e488]
+              - generic [ref=e489]: Pick a vibe and explore the top destinations in Malaysia
+            - navigation [ref=e492]:
+              - list [ref=e494]:
+                - listitem [ref=e495]:
+                  - button "Shopping & Outlets" [ref=e496] [cursor=pointer]:
+                    - generic [ref=e498]: Shopping & Outlets
+                - listitem [ref=e499]:
+                  - button "Historical Expeditions" [ref=e500] [cursor=pointer]:
+                    - generic [ref=e502]: Historical Expeditions
+                - listitem [ref=e503]:
+                  - button "Food Tours" [ref=e504] [cursor=pointer]:
+                    - generic [ref=e506]: Food Tours
+                - listitem [ref=e507]:
+                  - button "Heritage & Historic Sites" [ref=e508] [cursor=pointer]:
+                    - generic [ref=e510]: Heritage & Historic Sites
+                - listitem [ref=e511]:
+                  - button "Festivals & Events" [ref=e512] [cursor=pointer]:
+                    - generic [ref=e514]: Festivals & Events
+                - listitem [ref=e515]:
+                  - button "Wellness" [ref=e516] [cursor=pointer]:
+                    - generic [ref=e518]: Wellness
+                - generic [ref=e520]:
+                  - text: More
+                  - img [ref=e522]
+                - listitem [ref=e524]:
+                  - button "Adventurous Activities" [ref=e525] [cursor=pointer]:
+                    - generic [ref=e527]: Adventurous Activities
+                - listitem [ref=e528]:
+                  - button "Wildlife & Nature" [ref=e529] [cursor=pointer]:
+                    - generic [ref=e531]: Wildlife & Nature
+            - generic [ref=e533]:
+              - region "Quick and easy trip planner" [ref=e534]:
+                - group [ref=e535]:
+                  - link "Petaling Jaya 8 km away" [ref=e536] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403013&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e540]:
+                      - heading "Petaling Jaya" [level=3] [ref=e541]: Petaling Jaya
+                      - generic [ref=e544]: 8 km away
+                - group [ref=e545]:
+                  - link "Subang Jaya 9 km away" [ref=e546] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=900040248&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e550]:
+                      - heading "Subang Jaya" [level=3] [ref=e551]: Subang Jaya
+                      - generic [ref=e554]: 9 km away
+                - group [ref=e555]:
+                  - link "Shah Alam 11 km away" [ref=e556] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2405303&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e560]:
+                      - heading "Shah Alam" [level=3] [ref=e561]: Shah Alam
+                      - generic [ref=e564]: 11 km away
+                - group [ref=e565]:
+                  - link "Kuala Lumpur 14 km away" [ref=e566] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403010&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e570]:
+                      - heading "Kuala Lumpur" [level=3] [ref=e571]: Kuala Lumpur
+                      - generic [ref=e574]: 14 km away
+                - group [ref=e575]:
+                  - link "Malacca 128 km away" [ref=e576] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403412&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e580]:
+                      - heading "Malacca" [level=3] [ref=e581]: Malacca
+                      - generic [ref=e584]: 128 km away
+                - group [ref=e585]:
+                  - link "Ipoh 171 km away" [ref=e586] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403538&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e590]:
+                      - heading "Ipoh" [level=3] [ref=e591]: Ipoh
+                      - generic [ref=e594]: 171 km away
+                - group [ref=e595]:
+                  - link "George Town 289 km away" [ref=e596] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2403065&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e600]:
+                      - heading "George Town" [level=3] [ref=e601]: George Town
+                      - generic [ref=e604]: 289 km away
+                - group [ref=e605]:
+                  - link "Johor Bahru 304 km away" [ref=e606] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2405456&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e610]:
+                      - heading "Johor Bahru" [level=3] [ref=e611]: Johor Bahru
+                      - generic [ref=e614]: 304 km away
+                - group [ref=e615]:
+                  - link "Kuching 989 km away" [ref=e616] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2402530&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e620]:
+                      - heading "Kuching" [level=3] [ref=e621]: Kuching
+                      - generic [ref=e624]: 989 km away
+                - group [ref=e625]:
+                  - link "Kota Kinabalu 1,637 km away" [ref=e626] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=-2404760&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e630]:
+                      - heading "Kota Kinabalu" [level=3] [ref=e631]: Kota Kinabalu
+                      - generic [ref=e634]: 1,637 km away
+              - 'button "Next: Quick and easy trip planner" [ref=e635] [cursor=pointer]':
+                - img [ref=e638]
+          - generic [ref=e645]:
+            - generic [ref=e649]:
+              - heading "Explore Malaysia" [level=2] [ref=e650]
+              - generic [ref=e651]: These popular destinations have a lot to offer
+            - generic [ref=e652]:
+              - region "Explore Malaysia" [ref=e653]:
+                - group [ref=e654]:
+                  - link "Kuala Lumpur 8,397 properties" [ref=e655] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2403010&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e659]:
+                      - heading "Kuala Lumpur" [level=3] [ref=e660]: Kuala Lumpur
+                      - generic [ref=e663]: 8,397 properties
+                - group [ref=e664]:
+                  - link "Malacca 2,153 properties" [ref=e665] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2403412&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e669]:
+                      - heading "Malacca" [level=3] [ref=e670]: Malacca
+                      - generic [ref=e673]: 2,153 properties
+                - group [ref=e674]:
+                  - link "Johor Bahru 2,599 properties" [ref=e675] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2405456&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e679]:
+                      - heading "Johor Bahru" [level=3] [ref=e680]: Johor Bahru
+                      - generic [ref=e683]: 2,599 properties
+                - group [ref=e684]:
+                  - link "Ipoh 1,717 properties" [ref=e685] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2403538&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e689]:
+                      - heading "Ipoh" [level=3] [ref=e690]: Ipoh
+                      - generic [ref=e693]: 1,717 properties
+                - group [ref=e694]:
+                  - link "Kota Kinabalu 1,424 properties" [ref=e695] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2404760&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e699]:
+                      - heading "Kota Kinabalu" [level=3] [ref=e700]: Kota Kinabalu
+                      - generic [ref=e703]: 1,424 properties
+                - group [ref=e704]:
+                  - link "George Town 1,146 properties" [ref=e705] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2403065&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e709]:
+                      - heading "George Town" [level=3] [ref=e710]: George Town
+                      - generic [ref=e713]: 1,146 properties
+                - group [ref=e714]:
+                  - link "Kuantan 1,066 properties" [ref=e715] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2402944&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e719]:
+                      - heading "Kuantan" [level=3] [ref=e720]: Kuantan
+                      - generic [ref=e723]: 1,066 properties
+                - group [ref=e724]:
+                  - link "Petaling Jaya 923 properties" [ref=e725] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2403013&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e729]:
+                      - heading "Petaling Jaya" [level=3] [ref=e730]: Petaling Jaya
+                      - generic [ref=e733]: 923 properties
+                - group [ref=e734]:
+                  - link "Shah Alam 1,119 properties" [ref=e735] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=-2405303&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e739]:
+                      - heading "Shah Alam" [level=3] [ref=e740]: Shah Alam
+                      - generic [ref=e743]: 1,119 properties
+                - group [ref=e744]:
+                  - link "Genting Highlands 534 properties" [ref=e745] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-11&checkout=2026-07-12&dest_id=900041039&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e749]:
+                      - heading "Genting Highlands" [level=3] [ref=e750]: Genting Highlands
+                      - generic [ref=e753]: 534 properties
+              - 'button "Next: Explore Malaysia" [ref=e754] [cursor=pointer]':
+                - img [ref=e757]
+          - generic [ref=e764]:
+            - generic [ref=e768]:
+              - heading "Stay at our top unique properties" [level=2] [ref=e769]
+              - generic [ref=e770]: From castles and villas to boats and igloos, we have it all
+            - generic [ref=e771]:
+              - region "Stay at our top unique properties" [ref=e772]:
+                - group [ref=e773]:
+                  - generic [ref=e774]:
+                    - link "Hotel 3 out of 5 stars Bespoke Hotel Puchong Puchong, Malaysia 8.5 Very Good 831 reviews Starting from Original price MYR 206. Current price MYR 175." [ref=e775] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/bespoke-puchong.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e780]:
+                        - generic [ref=e781]:
+                          - generic [ref=e782]:
+                            - generic [ref=e783]: Hotel
+                            - img "3 out of 5 stars" [ref=e785]:
+                              - generic [ref=e786]:
+                                - img [ref=e788]
+                                - img [ref=e791]
+                              - generic [ref=e793]:
+                                - img [ref=e795]
+                                - img [ref=e798]
+                              - generic [ref=e800]:
+                                - img [ref=e802]
+                                - img [ref=e805]
+                          - generic [ref=e807]:
+                            - heading "Bespoke Hotel Puchong" [level=3] [ref=e808]
+                            - generic [ref=e810]: Puchong, Malaysia
+                          - generic [ref=e812]:
+                            - generic [ref=e813]: "8.5"
+                            - generic [ref=e814]: "8.5"
+                            - generic [ref=e815]:
+                              - generic [ref=e816]: Very Good
+                              - generic [ref=e817]: 831 reviews
+                        - generic [ref=e820]:
+                          - generic [ref=e821]: Starting from
+                          - generic [ref=e822]:
+                            - generic [ref=e823]: MYR 206
+                            - generic [ref=e824]: MYR 175
+                          - generic [ref=e825]: Original price MYR 206. Current price MYR 175.
+                    - button "Save this item to a trip list" [ref=e830] [cursor=pointer]:
+                      - img [ref=e833]
+                - group [ref=e835]:
+                  - generic [ref=e836]:
+                    - link "Hotel 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. The Light Hotel Penang Perai, Malaysia 8.8 Excellent 1,058 reviews Starting from Original price MYR 570. Current price MYR 353." [ref=e837] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-light-hotel-penang.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e842]:
+                        - generic [ref=e843]:
+                          - generic [ref=e844]:
+                            - generic [ref=e845]: Hotel
+                            - img "5 out of 5 stars" [ref=e847]:
+                              - generic [ref=e848]:
+                                - img [ref=e850]
+                                - img [ref=e853]
+                              - generic [ref=e855]:
+                                - img [ref=e857]
+                                - img [ref=e860]
+                              - generic [ref=e862]:
+                                - img [ref=e864]
+                                - img [ref=e867]
+                              - generic [ref=e869]:
+                                - img [ref=e871]
+                                - img [ref=e874]
+                              - generic [ref=e876]:
+                                - img [ref=e878]
+                                - img [ref=e881]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e884]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e885]:
+                                - img [ref=e886]
+                          - generic [ref=e888]:
+                            - heading "The Light Hotel Penang" [level=3] [ref=e889]
+                            - generic [ref=e891]: Perai, Malaysia
+                          - generic [ref=e893]:
+                            - generic [ref=e894]: "8.8"
+                            - generic [ref=e895]: "8.8"
+                            - generic [ref=e896]:
+                              - generic [ref=e897]: Excellent
+                              - generic [ref=e898]: 1,058 reviews
+                        - generic [ref=e901]:
+                          - generic [ref=e902]: Starting from
+                          - generic [ref=e903]:
+                            - generic [ref=e904]: MYR 570
+                            - generic [ref=e905]: MYR 353
+                          - generic [ref=e906]: Original price MYR 570. Current price MYR 353.
+                    - button "Save this item to a trip list" [ref=e911] [cursor=pointer]:
+                      - img [ref=e914]
+                - group [ref=e916]:
+                  - generic [ref=e917]:
+                    - link "Hotel 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Majestic Hotel Kuala Lumpur, Autograph Collection Kuala Lumpur, Malaysia 8.9 Excellent 2,862 reviews Starting from Price MYR 482" [ref=e918] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-majestic-kuala-lumpur.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e923]:
+                        - generic [ref=e924]:
+                          - generic [ref=e925]:
+                            - generic [ref=e926]: Hotel
+                            - img "5 out of 5 stars" [ref=e928]:
+                              - generic [ref=e929]:
+                                - img [ref=e931]
+                                - img [ref=e934]
+                              - generic [ref=e936]:
+                                - img [ref=e938]
+                                - img [ref=e941]
+                              - generic [ref=e943]:
+                                - img [ref=e945]
+                                - img [ref=e948]
+                              - generic [ref=e950]:
+                                - img [ref=e952]
+                                - img [ref=e955]
+                              - generic [ref=e957]:
+                                - img [ref=e959]
+                                - img [ref=e962]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e965]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e966]:
+                                - img [ref=e967]
+                            - img "blue Genius logo" [ref=e969]:
+                              - img [ref=e970]
+                          - generic [ref=e975]:
+                            - heading "The Majestic Hotel Kuala Lumpur, Autograph Collection" [level=3] [ref=e976]
+                            - generic [ref=e978]: Kuala Lumpur, Malaysia
+                          - generic [ref=e980]:
+                            - generic [ref=e981]: "8.9"
+                            - generic [ref=e982]: "8.9"
+                            - generic [ref=e983]:
+                              - generic [ref=e984]: Excellent
+                              - generic [ref=e985]: 2,862 reviews
+                        - generic [ref=e988]:
+                          - generic [ref=e989]: Starting from
+                          - generic [ref=e991]: MYR 482
+                          - generic [ref=e992]: Price MYR 482
+                    - button "Save this item to a trip list" [ref=e997] [cursor=pointer]:
+                      - img [ref=e1000]
+                - group [ref=e1002]:
+                  - generic [ref=e1003]:
+                    - link "Hotel 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Majestic Malacca, Melaka - Small Luxury Hotels of the World Malacca, Malaysia 8.9 Excellent 1,192 reviews Starting from Original price MYR 700. Current price MYR 574." [ref=e1004] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-majestic-malacca.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1009]:
+                        - generic [ref=e1010]:
+                          - generic [ref=e1011]:
+                            - generic [ref=e1012]: Hotel
+                            - img "5 out of 5 stars" [ref=e1014]:
+                              - generic [ref=e1015]:
+                                - img [ref=e1017]
+                                - img [ref=e1020]
+                              - generic [ref=e1022]:
+                                - img [ref=e1024]
+                                - img [ref=e1027]
+                              - generic [ref=e1029]:
+                                - img [ref=e1031]
+                                - img [ref=e1034]
+                              - generic [ref=e1036]:
+                                - img [ref=e1038]
+                                - img [ref=e1041]
+                              - generic [ref=e1043]:
+                                - img [ref=e1045]
+                                - img [ref=e1048]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1051]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1052]:
+                                - img [ref=e1053]
+                            - img "blue Genius logo" [ref=e1055]:
+                              - img [ref=e1056]
+                          - generic [ref=e1061]:
+                            - heading "The Majestic Malacca, Melaka - Small Luxury Hotels of the World" [level=3] [ref=e1062]
+                            - generic [ref=e1064]: Malacca, Malaysia
+                          - generic [ref=e1066]:
+                            - generic [ref=e1067]: "8.9"
+                            - generic [ref=e1068]: "8.9"
+                            - generic [ref=e1069]:
+                              - generic [ref=e1070]: Excellent
+                              - generic [ref=e1071]: 1,192 reviews
+                        - generic [ref=e1074]:
+                          - generic [ref=e1075]: Starting from
+                          - generic [ref=e1076]:
+                            - generic [ref=e1077]: MYR 700
+                            - generic [ref=e1078]: MYR 574
+                          - generic [ref=e1079]: Original price MYR 700. Current price MYR 574.
+                    - button "Save this item to a trip list" [ref=e1084] [cursor=pointer]:
+                      - img [ref=e1087]
+                - group [ref=e1089]:
+                  - generic [ref=e1090]:
+                    - link "Resort 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Lakehouse Cameron Highlands Ringlet, Malaysia 8.8 Excellent 511 reviews Starting from Price MYR 951" [ref=e1091] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-lakehouse-cameron-highlands-resort.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1096]:
+                        - generic [ref=e1097]:
+                          - generic [ref=e1098]:
+                            - generic [ref=e1099]: Resort
+                            - img "5 out of 5 stars" [ref=e1101]:
+                              - generic [ref=e1102]:
+                                - img [ref=e1104]
+                                - img [ref=e1107]
+                              - generic [ref=e1109]:
+                                - img [ref=e1111]
+                                - img [ref=e1114]
+                              - generic [ref=e1116]:
+                                - img [ref=e1118]
+                                - img [ref=e1121]
+                              - generic [ref=e1123]:
+                                - img [ref=e1125]
+                                - img [ref=e1128]
+                              - generic [ref=e1130]:
+                                - img [ref=e1132]
+                                - img [ref=e1135]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1138]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1139]:
+                                - img [ref=e1140]
+                            - img "blue Genius logo" [ref=e1142]:
+                              - img [ref=e1143]
+                          - generic [ref=e1148]:
+                            - heading "The Lakehouse Cameron Highlands" [level=3] [ref=e1149]
+                            - generic [ref=e1151]: Ringlet, Malaysia
+                          - generic [ref=e1153]:
+                            - generic [ref=e1154]: "8.8"
+                            - generic [ref=e1155]: "8.8"
+                            - generic [ref=e1156]:
+                              - generic [ref=e1157]: Excellent
+                              - generic [ref=e1158]: 511 reviews
+                        - generic [ref=e1161]:
+                          - generic [ref=e1162]: Starting from
+                          - generic [ref=e1164]: MYR 951
+                          - generic [ref=e1165]: Price MYR 951
+                    - button "Save this item to a trip list" [ref=e1170] [cursor=pointer]:
+                      - img [ref=e1173]
+                - group [ref=e1175]:
+                  - generic [ref=e1176]:
+                    - link "Hotel 3 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. The Jesselton Hotel Kota Kinabalu, Malaysia 8.5 Very Good 293 reviews Starting from Price MYR 254" [ref=e1177] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/jesselton.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1182]:
+                        - generic [ref=e1183]:
+                          - generic [ref=e1184]:
+                            - generic [ref=e1185]: Hotel
+                            - img "3 out of 5 stars" [ref=e1187]:
+                              - generic [ref=e1188]:
+                                - img [ref=e1190]
+                                - img [ref=e1193]
+                              - generic [ref=e1195]:
+                                - img [ref=e1197]
+                                - img [ref=e1200]
+                              - generic [ref=e1202]:
+                                - img [ref=e1204]
+                                - img [ref=e1207]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1210]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1211]:
+                                - img [ref=e1212]
+                          - generic [ref=e1214]:
+                            - heading "The Jesselton Hotel" [level=3] [ref=e1215]
+                            - generic [ref=e1217]: Kota Kinabalu, Malaysia
+                          - generic [ref=e1219]:
+                            - generic [ref=e1220]: "8.5"
+                            - generic [ref=e1221]: "8.5"
+                            - generic [ref=e1222]:
+                              - generic [ref=e1223]: Very Good
+                              - generic [ref=e1224]: 293 reviews
+                        - generic [ref=e1227]:
+                          - generic [ref=e1228]: Starting from
+                          - generic [ref=e1230]: MYR 254
+                          - generic [ref=e1231]: Price MYR 254
+                    - button "Save this item to a trip list" [ref=e1236] [cursor=pointer]:
+                      - img [ref=e1239]
+                - group [ref=e1241]:
+                  - generic [ref=e1242]:
+                    - link "Resort This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Culvert Kuching, Malaysia 8.2 Very Good 833 reviews Starting from Original price MYR 323. Current price MYR 290." [ref=e1243] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-culvert.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1248]:
+                        - generic [ref=e1249]:
+                          - generic [ref=e1250]:
+                            - generic [ref=e1251]: Resort
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1253]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1254]:
+                                - img [ref=e1255]
+                            - img "blue Genius logo" [ref=e1257]:
+                              - img [ref=e1258]
+                          - generic [ref=e1263]:
+                            - heading "The Culvert" [level=3] [ref=e1264]
+                            - generic [ref=e1266]: Kuching, Malaysia
+                          - generic [ref=e1268]:
+                            - generic [ref=e1269]: "8.2"
+                            - generic [ref=e1270]: "8.2"
+                            - generic [ref=e1271]:
+                              - generic [ref=e1272]: Very Good
+                              - generic [ref=e1273]: 833 reviews
+                        - generic [ref=e1276]:
+                          - generic [ref=e1277]: Starting from
+                          - generic [ref=e1278]:
+                            - generic [ref=e1279]: MYR 323
+                            - generic [ref=e1280]: MYR 290
+                          - generic [ref=e1281]: Original price MYR 323. Current price MYR 290.
+                    - button "Save this item to a trip list" [ref=e1286] [cursor=pointer]:
+                      - img [ref=e1289]
+                - group [ref=e1291]:
+                  - generic [ref=e1292]:
+                    - link "Hotel 4 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. The Smokehouse Hotel & Restaurant Cameron Highlands Cameron Highlands, Malaysia 8.0 Very Good 576 reviews Starting from Price MYR 445" [ref=e1293] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-smokehouse-restaurant-cameron-highlands.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1298]:
+                        - generic [ref=e1299]:
+                          - generic [ref=e1300]:
+                            - generic [ref=e1301]: Hotel
+                            - img "4 out of 5 stars" [ref=e1303]:
+                              - generic [ref=e1304]:
+                                - img [ref=e1306]
+                                - img [ref=e1309]
+                              - generic [ref=e1311]:
+                                - img [ref=e1313]
+                                - img [ref=e1316]
+                              - generic [ref=e1318]:
+                                - img [ref=e1320]
+                                - img [ref=e1323]
+                              - generic [ref=e1325]:
+                                - img [ref=e1327]
+                                - img [ref=e1330]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1333]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1334]:
+                                - img [ref=e1335]
+                          - generic [ref=e1337]:
+                            - heading "The Smokehouse Hotel & Restaurant Cameron Highlands" [level=3] [ref=e1338]
+                            - generic [ref=e1340]: Cameron Highlands, Malaysia
+                          - generic [ref=e1342]:
+                            - generic [ref=e1343]: "8.0"
+                            - generic [ref=e1344]: "8.0"
+                            - generic [ref=e1345]:
+                              - generic [ref=e1346]: Very Good
+                              - generic [ref=e1347]: 576 reviews
+                        - generic [ref=e1350]:
+                          - generic [ref=e1351]: Starting from
+                          - generic [ref=e1353]: MYR 445
+                          - generic [ref=e1354]: Price MYR 445
+                    - button "Save this item to a trip list" [ref=e1359] [cursor=pointer]:
+                      - img [ref=e1362]
+                - group [ref=e1364]:
+                  - generic [ref=e1365]:
+                    - link "Hotel 4 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Kuala Lumpur Journal Hotel Kuala Lumpur, Malaysia 8.8 Excellent 2,553 reviews Starting from Original price MYR 924. Current price MYR 462." [ref=e1366] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-kuala-lumpur-journal.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1371]:
+                        - generic [ref=e1372]:
+                          - generic [ref=e1373]:
+                            - generic [ref=e1374]: Hotel
+                            - img "4 out of 5 stars" [ref=e1376]:
+                              - generic [ref=e1377]:
+                                - img [ref=e1379]
+                                - img [ref=e1382]
+                              - generic [ref=e1384]:
+                                - img [ref=e1386]
+                                - img [ref=e1389]
+                              - generic [ref=e1391]:
+                                - img [ref=e1393]
+                                - img [ref=e1396]
+                              - generic [ref=e1398]:
+                                - img [ref=e1400]
+                                - img [ref=e1403]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1406]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1407]:
+                                - img [ref=e1408]
+                            - img "blue Genius logo" [ref=e1410]:
+                              - img [ref=e1411]
+                          - generic [ref=e1416]:
+                            - heading "The Kuala Lumpur Journal Hotel" [level=3] [ref=e1417]
+                            - generic [ref=e1419]: Kuala Lumpur, Malaysia
+                          - generic [ref=e1421]:
+                            - generic [ref=e1422]: "8.8"
+                            - generic [ref=e1423]: "8.8"
+                            - generic [ref=e1424]:
+                              - generic [ref=e1425]: Excellent
+                              - generic [ref=e1426]: 2,553 reviews
+                        - generic [ref=e1429]:
+                          - generic [ref=e1430]: Starting from
+                          - generic [ref=e1431]:
+                            - generic [ref=e1432]: MYR 924
+                            - generic [ref=e1433]: MYR 462
+                          - generic [ref=e1434]: Original price MYR 924. Current price MYR 462.
+                    - button "Save this item to a trip list" [ref=e1439] [cursor=pointer]:
+                      - img [ref=e1442]
+                - group [ref=e1444]:
+                  - generic [ref=e1445]:
+                    - link "Resort 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Banjaran Hotsprings Retreat Ipoh, Malaysia 9.6 Exceptional 973 reviews Starting from Price MYR 2,050" [ref=e1446] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-banjarn-hotsprings-retreat.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1451]:
+                        - generic [ref=e1452]:
+                          - generic [ref=e1453]:
+                            - generic [ref=e1454]: Resort
+                            - img "5 out of 5 stars" [ref=e1456]:
+                              - generic [ref=e1457]:
+                                - img [ref=e1459]
+                                - img [ref=e1462]
+                              - generic [ref=e1464]:
+                                - img [ref=e1466]
+                                - img [ref=e1469]
+                              - generic [ref=e1471]:
+                                - img [ref=e1473]
+                                - img [ref=e1476]
+                              - generic [ref=e1478]:
+                                - img [ref=e1480]
+                                - img [ref=e1483]
+                              - generic [ref=e1485]:
+                                - img [ref=e1487]
+                                - img [ref=e1490]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1493]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1494]:
+                                - img [ref=e1495]
+                            - img "blue Genius logo" [ref=e1497]:
+                              - img [ref=e1498]
+                          - generic [ref=e1503]:
+                            - heading "The Banjaran Hotsprings Retreat" [level=3] [ref=e1504]
+                            - generic [ref=e1506]: Ipoh, Malaysia
+                          - generic [ref=e1508]:
+                            - generic [ref=e1509]: "9.6"
+                            - generic [ref=e1510]: "9.6"
+                            - generic [ref=e1511]:
+                              - generic [ref=e1512]: Exceptional
+                              - generic [ref=e1513]: 973 reviews
+                        - generic [ref=e1516]:
+                          - generic [ref=e1517]: Starting from
+                          - generic [ref=e1519]: MYR 2,050
+                          - generic [ref=e1520]: Price MYR 2,050
+                    - button "Save this item to a trip list" [ref=e1525] [cursor=pointer]:
+                      - img [ref=e1528]
+                - group [ref=e1530]:
+                  - generic [ref=e1531]:
+                    - link "Resort 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. Tanjung Rhu Resort Tanjung Rhu, Malaysia 9.1 Wonderful 1,381 reviews Starting from Price MYR 1,350" [ref=e1532] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/tanjung-rhu-resort.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1537]:
+                        - generic [ref=e1538]:
+                          - generic [ref=e1539]:
+                            - generic [ref=e1540]: Resort
+                            - img "5 out of 5 stars" [ref=e1542]:
+                              - generic [ref=e1543]:
+                                - img [ref=e1545]
+                                - img [ref=e1548]
+                              - generic [ref=e1550]:
+                                - img [ref=e1552]
+                                - img [ref=e1555]
+                              - generic [ref=e1557]:
+                                - img [ref=e1559]
+                                - img [ref=e1562]
+                              - generic [ref=e1564]:
+                                - img [ref=e1566]
+                                - img [ref=e1569]
+                              - generic [ref=e1571]:
+                                - img [ref=e1573]
+                                - img [ref=e1576]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1579]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1580]:
+                                - img [ref=e1581]
+                          - generic [ref=e1583]:
+                            - heading "Tanjung Rhu Resort" [level=3] [ref=e1584]
+                            - generic [ref=e1586]: Tanjung Rhu, Malaysia
+                          - generic [ref=e1588]:
+                            - generic [ref=e1589]: "9.1"
+                            - generic [ref=e1590]: "9.1"
+                            - generic [ref=e1591]:
+                              - generic [ref=e1592]: Wonderful
+                              - generic [ref=e1593]: 1,381 reviews
+                        - generic [ref=e1596]:
+                          - generic [ref=e1597]: Starting from
+                          - generic [ref=e1599]: MYR 1,350
+                          - generic [ref=e1600]: Price MYR 1,350
+                    - button "Save this item to a trip list" [ref=e1605] [cursor=pointer]:
+                      - img [ref=e1608]
+                - group [ref=e1610]:
+                  - generic [ref=e1611]:
+                    - link "Resort 3 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. blue Genius logo The Ocean Residence Langkawi Kuah, Malaysia 8.3 Very Good 300 reviews Starting from Original price MYR 420. Current price MYR 294." [ref=e1612] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-ocean-residence-langkawi.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1617]:
+                        - generic [ref=e1618]:
+                          - generic [ref=e1619]:
+                            - generic [ref=e1620]: Resort
+                            - img "3 out of 5 stars" [ref=e1622]:
+                              - generic [ref=e1623]:
+                                - img [ref=e1625]
+                                - img [ref=e1628]
+                              - generic [ref=e1630]:
+                                - img [ref=e1632]
+                                - img [ref=e1635]
+                              - generic [ref=e1637]:
+                                - img [ref=e1639]
+                                - img [ref=e1642]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1645]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1646]:
+                                - img [ref=e1647]
+                            - img "blue Genius logo" [ref=e1649]:
+                              - img [ref=e1650]
+                          - generic [ref=e1655]:
+                            - heading "The Ocean Residence Langkawi" [level=3] [ref=e1656]
+                            - generic [ref=e1658]: Kuah, Malaysia
+                          - generic [ref=e1660]:
+                            - generic [ref=e1661]: "8.3"
+                            - generic [ref=e1662]: "8.3"
+                            - generic [ref=e1663]:
+                              - generic [ref=e1664]: Very Good
+                              - generic [ref=e1665]: 300 reviews
+                        - generic [ref=e1668]:
+                          - generic [ref=e1669]: Starting from
+                          - generic [ref=e1670]:
+                            - generic [ref=e1671]: MYR 420
+                            - generic [ref=e1672]: MYR 294
+                          - generic [ref=e1673]: Original price MYR 420. Current price MYR 294.
+                    - button "Save this item to a trip list" [ref=e1678] [cursor=pointer]:
+                      - img [ref=e1681]
+                - group [ref=e1683]:
+                  - generic [ref=e1684]:
+                    - link "Hotel 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. The Ritz-Carlton, Langkawi Pantai Kok, Malaysia 9.6 Exceptional 809 reviews Starting from Price MYR 3,200" [ref=e1685] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/the-ritz-carlton-langkawi.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1690]:
+                        - generic [ref=e1691]:
+                          - generic [ref=e1692]:
+                            - generic [ref=e1693]: Hotel
+                            - img "5 out of 5 stars" [ref=e1695]:
+                              - generic [ref=e1696]:
+                                - img [ref=e1698]
+                                - img [ref=e1701]
+                              - generic [ref=e1703]:
+                                - img [ref=e1705]
+                                - img [ref=e1708]
+                              - generic [ref=e1710]:
+                                - img [ref=e1712]
+                                - img [ref=e1715]
+                              - generic [ref=e1717]:
+                                - img [ref=e1719]
+                                - img [ref=e1722]
+                              - generic [ref=e1724]:
+                                - img [ref=e1726]
+                                - img [ref=e1729]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1732]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1733]:
+                                - img [ref=e1734]
+                          - generic [ref=e1736]:
+                            - heading "The Ritz-Carlton, Langkawi" [level=3] [ref=e1737]
+                            - generic [ref=e1739]: Pantai Kok, Malaysia
+                          - generic [ref=e1741]:
+                            - generic [ref=e1742]: "9.6"
+                            - generic [ref=e1743]: "9.6"
+                            - generic [ref=e1744]:
+                              - generic [ref=e1745]: Exceptional
+                              - generic [ref=e1746]: 809 reviews
+                        - generic [ref=e1749]:
+                          - generic [ref=e1750]: Starting from
+                          - generic [ref=e1752]: MYR 3,200
+                          - generic [ref=e1753]: Price MYR 3,200
+                    - button "Save this item to a trip list" [ref=e1758] [cursor=pointer]:
+                      - img [ref=e1761]
+                - group [ref=e1763]:
+                  - generic [ref=e1764]:
+                    - link "Resort 5 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. Six Senses Con Dao - Turtle Island Paradise Con Dao, Vietnam 9.7 Exceptional 62 reviews Starting from Price MYR 3,502" [ref=e1765] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/vn/six-senses-condao.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1770]:
+                        - generic [ref=e1771]:
+                          - generic [ref=e1772]:
+                            - generic [ref=e1773]: Resort
+                            - img "5 out of 5 stars" [ref=e1775]:
+                              - generic [ref=e1776]:
+                                - img [ref=e1778]
+                                - img [ref=e1781]
+                              - generic [ref=e1783]:
+                                - img [ref=e1785]
+                                - img [ref=e1788]
+                              - generic [ref=e1790]:
+                                - img [ref=e1792]
+                                - img [ref=e1795]
+                              - generic [ref=e1797]:
+                                - img [ref=e1799]
+                                - img [ref=e1802]
+                              - generic [ref=e1804]:
+                                - img [ref=e1806]
+                                - img [ref=e1809]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1812]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1813]:
+                                - img [ref=e1814]
+                          - generic [ref=e1816]:
+                            - heading "Six Senses Con Dao - Turtle Island Paradise" [level=3] [ref=e1817]
+                            - generic [ref=e1819]: Con Dao, Vietnam
+                          - generic [ref=e1821]:
+                            - generic [ref=e1822]: "9.7"
+                            - generic [ref=e1823]: "9.7"
+                            - generic [ref=e1824]:
+                              - generic [ref=e1825]: Exceptional
+                              - generic [ref=e1826]: 62 reviews
+                        - generic [ref=e1829]:
+                          - generic [ref=e1830]: Starting from
+                          - generic [ref=e1832]: MYR 3,502
+                          - generic [ref=e1833]: Price MYR 3,502
+                    - button "Save this item to a trip list" [ref=e1838] [cursor=pointer]:
+                      - img [ref=e1841]
+                - group [ref=e1843]:
+                  - generic [ref=e1844]:
+                    - link "Hotel 4 out of 5 stars This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking. Cheong Fatt Tze - The Blue Mansion George Town, Malaysia 9.4 Wonderful 1,109 reviews Starting from Original price MYR 1,328. Current price MYR 1,062." [ref=e1845] [cursor=pointer]:
+                      - /url: https://www.booking.com/hotel/my/cheong-fatt-tze-the-blue-mansion.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ucfs=1&arphpl=1
+                      - generic [ref=e1850]:
+                        - generic [ref=e1851]:
+                          - generic [ref=e1852]:
+                            - generic [ref=e1853]: Hotel
+                            - img "4 out of 5 stars" [ref=e1855]:
+                              - generic [ref=e1856]:
+                                - img [ref=e1858]
+                                - img [ref=e1861]
+                              - generic [ref=e1863]:
+                                - img [ref=e1865]
+                                - img [ref=e1868]
+                              - generic [ref=e1870]:
+                                - img [ref=e1872]
+                                - img [ref=e1875]
+                              - generic [ref=e1877]:
+                                - img [ref=e1879]
+                                - img [ref=e1882]
+                            - button "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1885]:
+                              - img "This property is part of our Preferred Partner Program. It's committed to providing excellent service and good value. It’ll pay us a higher commission if you make a booking." [ref=e1886]:
+                                - img [ref=e1887]
+                          - generic [ref=e1889]:
+                            - heading "Cheong Fatt Tze - The Blue Mansion" [level=3] [ref=e1890]
+                            - generic [ref=e1892]: George Town, Malaysia
+                          - generic [ref=e1894]:
+                            - generic [ref=e1895]: "9.4"
+                            - generic [ref=e1896]: "9.4"
+                            - generic [ref=e1897]:
+                              - generic [ref=e1898]: Wonderful
+                              - generic [ref=e1899]: 1,109 reviews
+                        - generic [ref=e1902]:
+                          - generic [ref=e1903]: Starting from
+                          - generic [ref=e1904]:
+                            - generic [ref=e1905]: MYR 1,328
+                            - generic [ref=e1906]: MYR 1,062
+                          - generic [ref=e1907]: Original price MYR 1,328. Current price MYR 1,062.
+                    - button "Save this item to a trip list" [ref=e1912] [cursor=pointer]:
+                      - img [ref=e1915]
+              - 'button "Next: Stay at our top unique properties" [ref=e1917] [cursor=pointer]':
+                - img [ref=e1920]
+          - generic [ref=e1926]:
+            - generic [ref=e1930]:
+              - heading "Deals for the weekend" [level=2] [ref=e1931]
+              - generic [ref=e1932]: Save on stays for July 10 - July 12
+            - generic [ref=e1933]:
+              - region "Deals for the weekend" [ref=e1934]:
+                - group [ref=e1935]:
+                  - generic [ref=e1936]:
+                    - link "blue Genius logo Arte Mont Kiara Studio,Kuala Lumpur Kuala Lumpur, Malaysia 8.8 Excellent 2 nights Original price MYR 254. Current price MYR 251." [ref=e1937] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=13040443&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e1942]:
+                        - generic [ref=e1943]:
+                          - img "blue Genius logo" [ref=e1945]:
+                            - img [ref=e1946]
+                          - generic [ref=e1951]:
+                            - heading "Arte Mont Kiara Studio,Kuala Lumpur" [level=3] [ref=e1952]
+                            - generic [ref=e1954]: Kuala Lumpur, Malaysia
+                          - generic [ref=e1956]:
+                            - generic [ref=e1957]: "8.8"
+                            - generic [ref=e1958]: "8.8"
+                            - generic [ref=e1959]: Excellent
+                            - generic [ref=e1960]:
+                              - generic [ref=e1961]: Excellent
+                              - generic [ref=e1962]: 48 reviews
+                        - generic [ref=e1965]:
+                          - generic [ref=e1966]: 2 nights
+                          - generic [ref=e1967]:
+                            - generic [ref=e1968]: MYR 254
+                            - generic [ref=e1969]: MYR 251
+                          - generic [ref=e1970]: Original price MYR 254. Current price MYR 251.
+                    - button "Save this item to a trip list" [ref=e1975] [cursor=pointer]:
+                      - img [ref=e1978]
+                - group [ref=e1980]:
+                  - generic [ref=e1981]:
+                    - link "blue Genius logo The Shore Hotel & Residences Malacca, Malaysia 7.7 Good 2 nights Original price MYR 1,011. Current price MYR 425." [ref=e1982] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=1508384&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e1987]:
+                        - generic [ref=e1988]:
+                          - img "blue Genius logo" [ref=e1990]:
+                            - img [ref=e1991]
+                          - generic [ref=e1996]:
+                            - heading "The Shore Hotel & Residences" [level=3] [ref=e1997]
+                            - generic [ref=e1999]: Malacca, Malaysia
+                          - generic [ref=e2001]:
+                            - generic [ref=e2002]: "7.7"
+                            - generic [ref=e2003]: "7.7"
+                            - generic [ref=e2004]: Good
+                            - generic [ref=e2005]:
+                              - generic [ref=e2006]: Good
+                              - generic [ref=e2007]: 5,151 reviews
+                        - generic [ref=e2010]:
+                          - generic [ref=e2011]: 2 nights
+                          - generic [ref=e2012]:
+                            - generic [ref=e2013]: MYR 1,011
+                            - generic [ref=e2014]: MYR 425
+                          - generic [ref=e2015]: Original price MYR 1,011. Current price MYR 425.
+                    - button "Save this item to a trip list" [ref=e2020] [cursor=pointer]:
+                      - img [ref=e2023]
+                - group [ref=e2025]:
+                  - generic [ref=e2026]:
+                    - link "blue Genius logo Kinta Riverfront Hotel & Suites Ipoh, Malaysia 8.4 Very Good 2 nights Original price MYR 890. Current price MYR 579." [ref=e2027] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=377257&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2032]:
+                        - generic [ref=e2033]:
+                          - img "blue Genius logo" [ref=e2035]:
+                            - img [ref=e2036]
+                          - generic [ref=e2041]:
+                            - heading "Kinta Riverfront Hotel & Suites" [level=3] [ref=e2042]
+                            - generic [ref=e2044]: Ipoh, Malaysia
+                          - generic [ref=e2046]:
+                            - generic [ref=e2047]: "8.4"
+                            - generic [ref=e2048]: "8.4"
+                            - generic [ref=e2049]: Very Good
+                            - generic [ref=e2050]:
+                              - generic [ref=e2051]: Very Good
+                              - generic [ref=e2052]: 2,562 reviews
+                        - generic [ref=e2055]:
+                          - generic [ref=e2056]: 2 nights
+                          - generic [ref=e2057]:
+                            - generic [ref=e2058]: MYR 890
+                            - generic [ref=e2059]: MYR 579
+                          - generic [ref=e2060]: Original price MYR 890. Current price MYR 579.
+                    - button "Save this item to a trip list" [ref=e2065] [cursor=pointer]:
+                      - img [ref=e2068]
+                - group [ref=e2070]:
+                  - generic [ref=e2071]:
+                    - link "blue Genius logo The Luxe Colony KLCC BY Infinitum Kuala Lumpur, Malaysia 7.6 Good Getaway Deal 2 nights Original price MYR 426. Current price MYR 171." [ref=e2072] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=12747565&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2077]:
+                        - generic [ref=e2078]:
+                          - img "blue Genius logo" [ref=e2080]:
+                            - img [ref=e2081]
+                          - generic [ref=e2086]:
+                            - heading "The Luxe Colony KLCC BY Infinitum" [level=3] [ref=e2087]
+                            - generic [ref=e2089]: Kuala Lumpur, Malaysia
+                          - generic [ref=e2091]:
+                            - generic [ref=e2092]: "7.6"
+                            - generic [ref=e2093]: "7.6"
+                            - generic [ref=e2094]: Good
+                            - generic [ref=e2095]:
+                              - generic [ref=e2096]: Good
+                              - generic [ref=e2097]: 193 reviews
+                          - generic "Getaway Deal" [ref=e2099]:
+                            - generic [ref=e2100]: Getaway Deal
+                        - generic [ref=e2103]:
+                          - generic [ref=e2104]: 2 nights
+                          - generic [ref=e2105]:
+                            - generic [ref=e2106]: MYR 426
+                            - generic [ref=e2107]: MYR 171
+                          - generic [ref=e2108]: Original price MYR 426. Current price MYR 171.
+                    - button "Save this item to a trip list" [ref=e2113] [cursor=pointer]:
+                      - img [ref=e2116]
+                - group [ref=e2118]:
+                  - generic [ref=e2119]:
+                    - link "blue Genius logo The Shore Hotel & Residences By Lá VISTA Malacca, Malaysia 7.6 Good Getaway Deal 2 nights Original price MYR 540. Current price MYR 378." [ref=e2120] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=8379906&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2125]:
+                        - generic [ref=e2126]:
+                          - img "blue Genius logo" [ref=e2128]:
+                            - img [ref=e2129]
+                          - generic [ref=e2134]:
+                            - heading "The Shore Hotel & Residences By Lá VISTA" [level=3] [ref=e2135]
+                            - generic [ref=e2137]: Malacca, Malaysia
+                          - generic [ref=e2139]:
+                            - generic [ref=e2140]: "7.6"
+                            - generic [ref=e2141]: "7.6"
+                            - generic [ref=e2142]: Good
+                            - generic [ref=e2143]:
+                              - generic [ref=e2144]: Good
+                              - generic [ref=e2145]: 529 reviews
+                          - generic "Getaway Deal" [ref=e2147]:
+                            - generic [ref=e2148]: Getaway Deal
+                        - generic [ref=e2151]:
+                          - generic [ref=e2152]: 2 nights
+                          - generic [ref=e2153]:
+                            - generic [ref=e2154]: MYR 540
+                            - generic [ref=e2155]: MYR 378
+                          - generic [ref=e2156]: Original price MYR 540. Current price MYR 378.
+                    - button "Save this item to a trip list" [ref=e2161] [cursor=pointer]:
+                      - img [ref=e2164]
+                - group [ref=e2166]:
+                  - generic [ref=e2167]:
+                    - link "blue Genius logo Cititel Express Ipoh Ipoh, Malaysia 7.9 Good 2 nights Original price MYR 360. Current price MYR 342." [ref=e2168] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=1291970&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2173]:
+                        - generic [ref=e2174]:
+                          - img "blue Genius logo" [ref=e2176]:
+                            - img [ref=e2177]
+                          - generic [ref=e2182]:
+                            - heading "Cititel Express Ipoh" [level=3] [ref=e2183]
+                            - generic [ref=e2185]: Ipoh, Malaysia
+                          - generic [ref=e2187]:
+                            - generic [ref=e2188]: "7.9"
+                            - generic [ref=e2189]: "7.9"
+                            - generic [ref=e2190]: Good
+                            - generic [ref=e2191]:
+                              - generic [ref=e2192]: Good
+                              - generic [ref=e2193]: 2,282 reviews
+                        - generic [ref=e2196]:
+                          - generic [ref=e2197]: 2 nights
+                          - generic [ref=e2198]:
+                            - generic [ref=e2199]: MYR 360
+                            - generic [ref=e2200]: MYR 342
+                          - generic [ref=e2201]: Original price MYR 360. Current price MYR 342.
+                    - button "Save this item to a trip list" [ref=e2206] [cursor=pointer]:
+                      - img [ref=e2209]
+                - group [ref=e2211]:
+                  - generic [ref=e2212]:
+                    - link "blue Genius logo Hotel Komune Living & Wellness Kuala Lumpur Kuala Lumpur, Malaysia 8.6 Excellent Getaway Deal 2 nights Original price MYR 380. Current price MYR 304." [ref=e2213] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=8040081&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2218]:
+                        - generic [ref=e2219]:
+                          - img "blue Genius logo" [ref=e2221]:
+                            - img [ref=e2222]
+                          - generic [ref=e2227]:
+                            - heading "Hotel Komune Living & Wellness Kuala Lumpur" [level=3] [ref=e2228]
+                            - generic [ref=e2230]: Kuala Lumpur, Malaysia
+                          - generic [ref=e2232]:
+                            - generic [ref=e2233]: "8.6"
+                            - generic [ref=e2234]: "8.6"
+                            - generic [ref=e2235]: Excellent
+                            - generic [ref=e2236]:
+                              - generic [ref=e2237]: Excellent
+                              - generic [ref=e2238]: 2,629 reviews
+                          - generic "Getaway Deal" [ref=e2240]:
+                            - generic [ref=e2241]: Getaway Deal
+                        - generic [ref=e2244]:
+                          - generic [ref=e2245]: 2 nights
+                          - generic [ref=e2246]:
+                            - generic [ref=e2247]: MYR 380
+                            - generic [ref=e2248]: MYR 304
+                          - generic [ref=e2249]: Original price MYR 380. Current price MYR 304.
+                    - button "Save this item to a trip list" [ref=e2254] [cursor=pointer]:
+                      - img [ref=e2257]
+                - group [ref=e2259]:
+                  - generic [ref=e2260]:
+                    - link "blue Genius logo Swiss-Garden Hotel Melaka Malacca, Malaysia 8.2 Very Good 2 nights Original price MYR 1,457. Current price MYR 685." [ref=e2261] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=1163913&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2266]:
+                        - generic [ref=e2267]:
+                          - img "blue Genius logo" [ref=e2269]:
+                            - img [ref=e2270]
+                          - generic [ref=e2275]:
+                            - heading "Swiss-Garden Hotel Melaka" [level=3] [ref=e2276]
+                            - generic [ref=e2278]: Malacca, Malaysia
+                          - generic [ref=e2280]:
+                            - generic [ref=e2281]: "8.2"
+                            - generic [ref=e2282]: "8.2"
+                            - generic [ref=e2283]: Very Good
+                            - generic [ref=e2284]:
+                              - generic [ref=e2285]: Very Good
+                              - generic [ref=e2286]: 9,212 reviews
+                        - generic [ref=e2289]:
+                          - generic [ref=e2290]: 2 nights
+                          - generic [ref=e2291]:
+                            - generic [ref=e2292]: MYR 1,457
+                            - generic [ref=e2293]: MYR 685
+                          - generic [ref=e2294]: Original price MYR 1,457. Current price MYR 685.
+                    - button "Save this item to a trip list" [ref=e2299] [cursor=pointer]:
+                      - img [ref=e2302]
+                - group [ref=e2304]:
+                  - generic [ref=e2305]:
+                    - link "blue Genius logo Regent Event & Leisure Ipoh, Malaysia 9.2 Wonderful Limited-time Deal 2 nights Original price MYR 476. Current price MYR 281." [ref=e2306] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=13674437&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2311]:
+                        - generic [ref=e2312]:
+                          - img "blue Genius logo" [ref=e2314]:
+                            - img [ref=e2315]
+                          - generic [ref=e2320]:
+                            - heading "Regent Event & Leisure" [level=3] [ref=e2321]
+                            - generic [ref=e2323]: Ipoh, Malaysia
+                          - generic [ref=e2325]:
+                            - generic [ref=e2326]: "9.2"
+                            - generic [ref=e2327]: "9.2"
+                            - generic [ref=e2328]: Wonderful
+                            - generic [ref=e2329]:
+                              - generic [ref=e2330]: Wonderful
+                              - generic [ref=e2331]: 290 reviews
+                          - generic "Limited-time Deal" [ref=e2333]:
+                            - generic [ref=e2334]: Limited-time Deal
+                        - generic [ref=e2337]:
+                          - generic [ref=e2338]: 2 nights
+                          - generic [ref=e2339]:
+                            - generic [ref=e2340]: MYR 476
+                            - generic [ref=e2341]: MYR 281
+                          - generic [ref=e2342]: Original price MYR 476. Current price MYR 281.
+                    - button "Save this item to a trip list" [ref=e2347] [cursor=pointer]:
+                      - img [ref=e2350]
+                - group [ref=e2352]:
+                  - generic [ref=e2353]:
+                    - link "blue Genius logo CLASSY SUITE's M A J E S T I C KLCC Kuala Lumpur, Malaysia 7.8 Good 2 nights Original price MYR 495. Current price MYR 347." [ref=e2354] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=16246040&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2359]:
+                        - generic [ref=e2360]:
+                          - img "blue Genius logo" [ref=e2362]:
+                            - img [ref=e2363]
+                          - generic [ref=e2368]:
+                            - heading "CLASSY SUITE's M A J E S T I C KLCC" [level=3] [ref=e2369]
+                            - generic [ref=e2371]: Kuala Lumpur, Malaysia
+                          - generic [ref=e2373]:
+                            - generic [ref=e2374]: "7.8"
+                            - generic [ref=e2375]: "7.8"
+                            - generic [ref=e2376]: Good
+                            - generic [ref=e2377]:
+                              - generic [ref=e2378]: Good
+                              - generic [ref=e2379]: 91 reviews
+                        - generic [ref=e2382]:
+                          - generic [ref=e2383]: 2 nights
+                          - generic [ref=e2384]:
+                            - generic [ref=e2385]: MYR 495
+                            - generic [ref=e2386]: MYR 347
+                          - generic [ref=e2387]: Original price MYR 495. Current price MYR 347.
+                    - button "Save this item to a trip list" [ref=e2392] [cursor=pointer]:
+                      - img [ref=e2395]
+                - group [ref=e2397]:
+                  - generic [ref=e2398]:
+                    - link "blue Genius logo SilverScape Residence I Luxury 2-4 BR I 6-11 pax I Bathtub I Seaview I Infinity Pool I Jonker St I City Centre by Jay Stay Management Malacca, Malaysia 7.2 Good Getaway Deal 2 nights Original price MYR 554. Current price MYR 471." [ref=e2399] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=9563959&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2404]:
+                        - generic [ref=e2405]:
+                          - img "blue Genius logo" [ref=e2407]:
+                            - img [ref=e2408]
+                          - generic [ref=e2413]:
+                            - heading "SilverScape Residence I Luxury 2-4 BR I 6-11 pax I Bathtub I Seaview I Infinity Pool I Jonker St I City Centre by Jay Stay Management" [level=3] [ref=e2414]
+                            - generic [ref=e2416]: Malacca, Malaysia
+                          - generic [ref=e2418]:
+                            - generic [ref=e2419]: "7.2"
+                            - generic [ref=e2420]: "7.2"
+                            - generic [ref=e2421]: Good
+                            - generic [ref=e2422]:
+                              - generic [ref=e2423]: Good
+                              - generic [ref=e2424]: 720 reviews
+                          - generic "Getaway Deal" [ref=e2426]:
+                            - generic [ref=e2427]: Getaway Deal
+                        - generic [ref=e2430]:
+                          - generic [ref=e2431]: 2 nights
+                          - generic [ref=e2432]:
+                            - generic [ref=e2433]: MYR 554
+                            - generic [ref=e2434]: MYR 471
+                          - generic [ref=e2435]: Original price MYR 554. Current price MYR 471.
+                    - button "Save this item to a trip list" [ref=e2440] [cursor=pointer]:
+                      - img [ref=e2443]
+                - group [ref=e2445]:
+                  - generic [ref=e2446]:
+                    - link "blue Genius logo Manhattan Hotel Ipoh Ipoh, Malaysia 8 Very Good Limited-time Deal 2 nights Original price MYR 336. Current price MYR 232." [ref=e2447] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&checkin=2026-07-10&checkout=2026-07-12&dest_id=2185174&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                      - generic [ref=e2452]:
+                        - generic [ref=e2453]:
+                          - img "blue Genius logo" [ref=e2455]:
+                            - img [ref=e2456]
+                          - generic [ref=e2461]:
+                            - heading "Manhattan Hotel Ipoh" [level=3] [ref=e2462]
+                            - generic [ref=e2464]: Ipoh, Malaysia
+                          - generic [ref=e2466]:
+                            - generic [ref=e2467]: "8"
+                            - generic [ref=e2468]: "8"
+                            - generic [ref=e2469]: Very Good
+                            - generic [ref=e2470]:
+                              - generic [ref=e2471]: Very Good
+                              - generic [ref=e2472]: 1,396 reviews
+                          - generic "Limited-time Deal" [ref=e2474]:
+                            - generic [ref=e2475]: Limited-time Deal
+                        - generic [ref=e2478]:
+                          - generic [ref=e2479]: 2 nights
+                          - generic [ref=e2480]:
+                            - generic [ref=e2481]: MYR 336
+                            - generic [ref=e2482]: MYR 232
+                          - generic [ref=e2483]: Original price MYR 336. Current price MYR 232.
+                    - button "Save this item to a trip list" [ref=e2488] [cursor=pointer]:
+                      - img [ref=e2491]
+              - 'button "Next: Deals for the weekend" [ref=e2493] [cursor=pointer]':
+                - img [ref=e2496]
+          - generic [ref=e2503]:
+            - generic [ref=e2505]:
+              - heading "Homes guests love" [level=2] [ref=e2508]
+              - link "Discover homes" [ref=e2511] [cursor=pointer]:
+                - /url: https://www.booking.com/booking-home/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e2512]: Discover homes
+            - generic [ref=e2513]:
+              - region "Homes guests love" [ref=e2514]:
+                - group [ref=e2515]:
+                  - generic [ref=e2516]:
+                    - link "Aparthotel Stare Miasto Old Town, Poland, Krakow 8.8 Excellent Starting from Price MYR 586" [ref=e2517] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295
+                      - generic [ref=e2522]:
+                        - generic [ref=e2523]:
+                          - generic [ref=e2524]:
+                            - heading "Aparthotel Stare Miasto" [level=3] [ref=e2525]
+                            - generic [ref=e2527]: Old Town, Poland, Krakow
+                          - generic [ref=e2529]:
+                            - generic [ref=e2530]: "8.8"
+                            - generic [ref=e2531]: "8.8"
+                            - generic [ref=e2532]: Excellent
+                            - generic [ref=e2533]:
+                              - generic [ref=e2534]: Excellent
+                              - generic [ref=e2535]: 3,071 reviews
+                        - generic [ref=e2538]:
+                          - generic [ref=e2539]: Starting from
+                          - generic [ref=e2541]: MYR 586
+                          - generic [ref=e2542]: Price MYR 586
+                    - button "Save this item to a trip list" [ref=e2547] [cursor=pointer]:
+                      - img [ref=e2550]
+                - group [ref=e2552]:
+                  - generic [ref=e2553]:
+                    - link "NĒRO Boutique Hotel Greece, Imerovigli 9.6 Exceptional Starting from Price MYR 2,535" [ref=e2554] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883
+                      - generic [ref=e2559]:
+                        - generic [ref=e2560]:
+                          - generic [ref=e2561]:
+                            - heading "NĒRO Boutique Hotel" [level=3] [ref=e2562]
+                            - generic [ref=e2564]: Greece, Imerovigli
+                          - generic [ref=e2566]:
+                            - generic [ref=e2567]: "9.6"
+                            - generic [ref=e2568]: "9.6"
+                            - generic [ref=e2569]: Exceptional
+                            - generic [ref=e2570]:
+                              - generic [ref=e2571]: Exceptional
+                              - generic [ref=e2572]: 113 reviews
+                        - generic [ref=e2575]:
+                          - generic [ref=e2576]: Starting from
+                          - generic [ref=e2578]: MYR 2,535
+                          - generic [ref=e2579]: Price MYR 2,535
+                    - button "Save this item to a trip list" [ref=e2584] [cursor=pointer]:
+                      - img [ref=e2587]
+                - group [ref=e2589]:
+                  - generic [ref=e2590]:
+                    - link "Unique Design Apartments Santa Maria Maior, Portugal, Lisbon 9.7 Exceptional Starting from Price MYR 2,251" [ref=e2591] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1194981&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1194981
+                      - generic [ref=e2596]:
+                        - generic [ref=e2597]:
+                          - generic [ref=e2598]:
+                            - heading "Unique Design Apartments" [level=3] [ref=e2599]
+                            - generic [ref=e2601]: Santa Maria Maior, Portugal, Lisbon
+                          - generic [ref=e2603]:
+                            - generic [ref=e2604]: "9.7"
+                            - generic [ref=e2605]: "9.7"
+                            - generic [ref=e2606]: Exceptional
+                            - generic [ref=e2607]:
+                              - generic [ref=e2608]: Exceptional
+                              - generic [ref=e2609]: 94 reviews
+                        - generic [ref=e2612]:
+                          - generic [ref=e2613]: Starting from
+                          - generic [ref=e2615]: MYR 2,251
+                          - generic [ref=e2616]: Price MYR 2,251
+                    - button "Save this item to a trip list" [ref=e2621] [cursor=pointer]:
+                      - img [ref=e2624]
+                - group [ref=e2626]:
+                  - generic [ref=e2627]:
+                    - link "7Seasons Apartments Budapest 06. Terézváros, Hungary, Budapest 8.8 Excellent Starting from Price MYR 670" [ref=e2628] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365
+                      - generic [ref=e2633]:
+                        - generic [ref=e2634]:
+                          - generic [ref=e2635]:
+                            - heading "7Seasons Apartments Budapest" [level=3] [ref=e2636]
+                            - generic [ref=e2638]: 06. Terézváros, Hungary, Budapest
+                          - generic [ref=e2640]:
+                            - generic [ref=e2641]: "8.8"
+                            - generic [ref=e2642]: "8.8"
+                            - generic [ref=e2643]: Excellent
+                            - generic [ref=e2644]:
+                              - generic [ref=e2645]: Excellent
+                              - generic [ref=e2646]: 10,042 reviews
+                        - generic [ref=e2649]:
+                          - generic [ref=e2650]: Starting from
+                          - generic [ref=e2652]: MYR 670
+                          - generic [ref=e2653]: Price MYR 670
+                    - button "Save this item to a trip list" [ref=e2658] [cursor=pointer]:
+                      - img [ref=e2661]
+                - group [ref=e2663]:
+                  - generic [ref=e2664]:
+                    - link "Elegant & Stylish Apartment city center 06. Terézváros, Hungary, Budapest 9.3 Wonderful Starting from Price MYR 526" [ref=e2665] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1841061&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1841061
+                      - generic [ref=e2670]:
+                        - generic [ref=e2671]:
+                          - generic [ref=e2672]:
+                            - heading "Elegant & Stylish Apartment city center" [level=3] [ref=e2673]
+                            - generic [ref=e2675]: 06. Terézváros, Hungary, Budapest
+                          - generic [ref=e2677]:
+                            - generic [ref=e2678]: "9.3"
+                            - generic [ref=e2679]: "9.3"
+                            - generic [ref=e2680]: Wonderful
+                            - generic [ref=e2681]:
+                              - generic [ref=e2682]: Wonderful
+                              - generic [ref=e2683]: 96 reviews
+                        - generic [ref=e2686]:
+                          - generic [ref=e2687]: Starting from
+                          - generic [ref=e2689]: MYR 526
+                          - generic [ref=e2690]: Price MYR 526
+                    - button "Save this item to a trip list" [ref=e2695] [cursor=pointer]:
+                      - img [ref=e2698]
+                - group [ref=e2700]:
+                  - generic [ref=e2701]:
+                    - link "Oriente Palace Apartments Madrid City Center, Spain, Madrid 8.9 Excellent Starting from Price MYR 914" [ref=e2702] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=2182677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2182677
+                      - generic [ref=e2707]:
+                        - generic [ref=e2708]:
+                          - generic [ref=e2709]:
+                            - heading "Oriente Palace Apartments" [level=3] [ref=e2710]
+                            - generic [ref=e2712]: Madrid City Center, Spain, Madrid
+                          - generic [ref=e2714]:
+                            - generic [ref=e2715]: "8.9"
+                            - generic [ref=e2716]: "8.9"
+                            - generic [ref=e2717]: Excellent
+                            - generic [ref=e2718]:
+                              - generic [ref=e2719]: Excellent
+                              - generic [ref=e2720]: 3,650 reviews
+                        - generic [ref=e2723]:
+                          - generic [ref=e2724]: Starting from
+                          - generic [ref=e2726]: MYR 914
+                          - generic [ref=e2727]: Price MYR 914
+                    - button "Save this item to a trip list" [ref=e2732] [cursor=pointer]:
+                      - img [ref=e2735]
+                - group [ref=e2737]:
+                  - generic [ref=e2738]:
+                    - link "Pick A Flat's in Champs Elysees - Rue Percier 8th arr., France, Paris 8.8 Excellent Starting from Price MYR 2,092" [ref=e2739] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1893598&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1893598
+                      - generic [ref=e2744]:
+                        - generic [ref=e2745]:
+                          - generic [ref=e2746]:
+                            - heading "Pick A Flat's in Champs Elysees - Rue Percier" [level=3] [ref=e2747]
+                            - generic [ref=e2749]: 8th arr., France, Paris
+                          - generic [ref=e2751]:
+                            - generic [ref=e2752]: "8.8"
+                            - generic [ref=e2753]: "8.8"
+                            - generic [ref=e2754]: Excellent
+                            - generic [ref=e2755]:
+                              - generic [ref=e2756]: Excellent
+                              - generic [ref=e2757]: 22 reviews
+                        - generic [ref=e2760]:
+                          - generic [ref=e2761]: Starting from
+                          - generic [ref=e2763]: MYR 2,092
+                          - generic [ref=e2764]: Price MYR 2,092
+                    - button "Save this item to a trip list" [ref=e2769] [cursor=pointer]:
+                      - img [ref=e2772]
+                - group [ref=e2774]:
+                  - generic [ref=e2775]:
+                    - link "Mar Bella Beach Apartments Sant Martí, Spain, Barcelona 8.8 Excellent Starting from Price MYR 1,192" [ref=e2776] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=283745&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=283745
+                      - generic [ref=e2781]:
+                        - generic [ref=e2782]:
+                          - generic [ref=e2783]:
+                            - heading "Mar Bella Beach Apartments" [level=3] [ref=e2784]
+                            - generic [ref=e2786]: Sant Martí, Spain, Barcelona
+                          - generic [ref=e2788]:
+                            - generic [ref=e2789]: "8.8"
+                            - generic [ref=e2790]: "8.8"
+                            - generic [ref=e2791]: Excellent
+                            - generic [ref=e2792]:
+                              - generic [ref=e2793]: Excellent
+                              - generic [ref=e2794]: 523 reviews
+                        - generic [ref=e2797]:
+                          - generic [ref=e2798]: Starting from
+                          - generic [ref=e2800]: MYR 1,192
+                          - generic [ref=e2801]: Price MYR 1,192
+                    - button "Save this item to a trip list" [ref=e2806] [cursor=pointer]:
+                      - img [ref=e2809]
+                - group [ref=e2811]:
+                  - generic [ref=e2812]:
+                    - link "The Apartments by The Sloane Club Kensington and Chelsea, United Kingdom, London 9.0 Wonderful Starting from Price MYR 2,993" [ref=e2813] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506
+                      - generic [ref=e2818]:
+                        - generic [ref=e2819]:
+                          - generic [ref=e2820]:
+                            - heading "The Apartments by The Sloane Club" [level=3] [ref=e2821]
+                            - generic [ref=e2823]: Kensington and Chelsea, United Kingdom, London
+                          - generic [ref=e2825]:
+                            - generic [ref=e2826]: "9.0"
+                            - generic [ref=e2827]: "9.0"
+                            - generic [ref=e2828]: Wonderful
+                            - generic [ref=e2829]:
+                              - generic [ref=e2830]: Wonderful
+                              - generic [ref=e2831]: 256 reviews
+                        - generic [ref=e2834]:
+                          - generic [ref=e2835]: Starting from
+                          - generic [ref=e2837]: MYR 2,993
+                          - generic [ref=e2838]: Price MYR 2,993
+                    - button "Save this item to a trip list" [ref=e2843] [cursor=pointer]:
+                      - img [ref=e2846]
+                - group [ref=e2848]:
+                  - generic [ref=e2849]:
+                    - link "Luxury Apartments Villa Klara Znjan, Croatia, Split 9.2 Wonderful Starting from Price MYR 1,186" [ref=e2850] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&dest_id=1067442&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1067442
+                      - generic [ref=e2855]:
+                        - generic [ref=e2856]:
+                          - generic [ref=e2857]:
+                            - heading "Luxury Apartments Villa Klara" [level=3] [ref=e2858]
+                            - generic [ref=e2860]: Znjan, Croatia, Split
+                          - generic [ref=e2862]:
+                            - generic [ref=e2863]: "9.2"
+                            - generic [ref=e2864]: "9.2"
+                            - generic [ref=e2865]: Wonderful
+                            - generic [ref=e2866]:
+                              - generic [ref=e2867]: Wonderful
+                              - generic [ref=e2868]: 215 reviews
+                        - generic [ref=e2871]:
+                          - generic [ref=e2872]: Starting from
+                          - generic [ref=e2874]: MYR 1,186
+                          - generic [ref=e2875]: Price MYR 1,186
+                    - button "Save this item to a trip list" [ref=e2880] [cursor=pointer]:
+                      - img [ref=e2883]
+              - 'button "Next: Homes guests love" [ref=e2885] [cursor=pointer]':
+                - img [ref=e2888]
+          - iframe [ref=e2899]:
+            - link "Ad Explore Vietnam From Bays to Terraced Hills Historic Tran Quoc Pagoda Reflections on Hanoi's West Lake. Bai Tu Long Bay Sail through the serene limestone karsts of Bai Tu Long Bay. Mirror-like Terraces Sunset views over the terraced fields of Mu Cang Chai." [ref=f3e8] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjss63aMG_sPo2AkuyYRmUZa9D39Opneh1mDGhB-VV-LiW1EuEoQQDEWZnBEqniPWzIlqspJBwi2zEd_WyTds-vu-dnGrxgyacC3E36n38kIBJFfYqaSHpK4UDW3Y1YFE_sOmZWtiGTaO1kNBGojW0rCSUczX1mCcS6aiKE2C9T5MWL8nMysTzKD7mBKLDhIJOut3AoGUQFO1hDCRjzbzcEgA7_IrwQFZmUwUz2Gkw1R1Ru2hCROiqbKY0QIXxRSWwPt6yFAVCSk83FOZwAM06Riy3yMSWn5KO2vnUj0pIenYSrUnfVhvOT61RHKAyMy6d77zC5oS6_3XI-ufTRKXf81fEbF-F9B4N9sjQY9T2WlRhnikxmH7DWm0aGQd03kZufZXq9D4xAPmON4RjmqwmrQujCW8tWmTryjI398xx4FhrzQXUN8IAxol0G4&sai=AMfl-YTkdkYNkK3BU0xzJIWu1GGDT93_69r9iZaArk917633iaxaTo6SyWkpAjkTyshfvQvJ7_n2Fx_ZoaT55fg7VmoBNVgKfD2PC-kc8i16Q898iKLL24HOjyyJ9ReeA-B_lEqA1mOon4EBk6LpneShIDkzDtDG2_pNKGXZuWzcGZy6MjbkDg9QOSVzCQpEFoXmAsHcML-bg0bSMHcsq1_fN6DVg9Ky52Yc6xw9GDMXdMWuv8lyqxDJojYwOlAxLQkAVULPCD8v2smpA04G-Brl_pz-mmqUQpwZ6L9a8vVOtzhF6_RmxMkRwLvk-9lNHVW_oSjDebDNuff0vUvMX_K96SmacQmL2EkvgkppQl05-9TyuTlkj6N0Io4Lrq0qR5LCeSfCw2wUkaPXB8w&sig=Cg0ArKJSzON1-5-6E7UQEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https%3A%2F%2Fwww.booking.com%2Fbas%2Fndisplay%2Fredirect%3Fndisplay_ad_id%3D4e4b8b60-4d9c-4bdf-9ad8-a2dc4481cd16%26affiliate_id%3D304142%26rendered_ad_pageview_id%3D31811344d0200424%26rendered_ad_sitetype%3DWWW%26rendered_ad_vertical%3Daccommodations%26rendered_ad_position%3DINDEX_SECONDARY%26rendered_ad_pagename%3Dindex%26url%3Dhttps%253A%252F%252Fwww.booking.com%252Fcndlp%252Fvietnam-sr%252F4l5HUqCa3Ykg83Bjw7hC3k.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ%26campaign_id%3D4024172376%26creative_id%3D138550574099%26line_item_id%3D7311439663
+              - generic [ref=f3e10]:
+                - generic [ref=f3e13]:
+                  - generic [ref=f3e15]:
+                    - generic [ref=f3e18]: Ad
+                    - generic [ref=f3e21]: Explore Vietnam
+                  - generic [ref=f3e24]: From Bays to Terraced Hills
+                - generic [ref=f3e25]:
+                  - generic [ref=f3e28]:
+                    - generic [ref=f3e29]: Historic Tran Quoc Pagoda
+                    - generic [ref=f3e30]: Reflections on Hanoi's West Lake.
+                  - generic [ref=f3e38]:
+                    - generic [ref=f3e39]: Bai Tu Long Bay
+                    - generic [ref=f3e40]: Sail through the serene limestone karsts of Bai Tu Long Bay.
+                  - generic [ref=f3e48]:
+                    - generic [ref=f3e49]: Mirror-like Terraces
+                    - generic [ref=f3e50]: Sunset views over the terraced fields of Mu Cang Chai.
+        - generic [ref=e2908]:
+          - heading "Travel more, spend less" [level=2] [ref=e2910]
+          - generic [ref=e2915]:
+            - heading "Sign in, save money" [level=3] [ref=e2916]
+            - generic [ref=e2917]: Save 10% or more at participating properties – just look for the blue Genius label
+            - generic [ref=e2918]:
+              - link "Sign in" [ref=e2919] [cursor=pointer]:
+                - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&state=UtcBZqVuIOoLgfkjRNbtifUabXfhKYFi2fyacanwjfMBMe67O2kTmFeE_shEZzzoeSqtwXbXFf0Njmk6_MwzybZAfz3psVYr5ZC_nBn0GUzivlHEk4CU5ZjjN27kc6Wx9d0D5eXhunj_EjZ4G3ba1wXfNrWiTsiOJL1bzMMLIzbco6SQRaSy48p2StojdxCUPQLn_8IMZ-2T31Og2asprbthy-xfQIMwEydxbswRLNOJ6Vd-HNo7ezJom_p1foOVWexSM-Yru9INKGPKm2ghV68SLyETfLUmowY%3D*eyJpZCI6ImluZGV4In0%3D
+                - generic [ref=e2920]: Sign in
+              - link "Register" [ref=e2921] [cursor=pointer]:
+                - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&state=UtcBZqVuIOoLgfkjRNbtifUabXfhKYFi2fyacanwjfMBMe67O2kTmFeE_shEZzzoeSqtwXbXFf0Njmk6_MwzybZAfz3psVYr5ZC_nBn0GUzivlHEk4CU5ZjjN27kc6Wx9d0D5eXhunj_EjZ4G3ba1wXfNrWiTsiOJL1bzMMLIzbco6SQRaSy48p2StojdxCUPQLn_8IMZ-2T31Og2asprbthy-xfQIMwEydxbswRLNOJ6Vd-HNo7ezJom_p1foOVWexSM-Yru9INKGPKm2ghV68SLyETfLUmowY%3D*eyJpZCI6ImluZGV4In0%3D
+                - generic [ref=e2922]: Register
+        - generic [ref=e2932]:
+          - heading "Popular with travelers from Malaysia" [level=2] [ref=e2934]
+          - navigation [ref=e2935]:
+            - tablist [ref=e2937]:
+              - tab "Domestic cities" [selected] [ref=e2938] [cursor=pointer]:
+                - generic [ref=e2940]: Domestic cities
+              - tab "International cities" [ref=e2941] [cursor=pointer]:
+                - generic [ref=e2943]: International cities
+              - tab "Regions" [ref=e2944] [cursor=pointer]:
+                - generic [ref=e2946]: Regions
+              - tab "Countries" [ref=e2947] [cursor=pointer]:
+                - generic [ref=e2949]: Countries
+              - tab "Places to stay" [ref=e2950] [cursor=pointer]:
+                - generic [ref=e2952]: Places to stay
+            - tabpanel "Domestic cities" [ref=e2954]:
+              - generic [ref=e2955]:
+                - list [ref=e2956]:
+                  - listitem [ref=e2957]:
+                    - link "Kuala Lumpur hotels" [ref=e2961] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/kuala-lumpur.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2962]: Kuala Lumpur hotels
+                  - listitem [ref=e2963]:
+                    - link "Ipoh hotels" [ref=e2967] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/ipoh.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2968]: Ipoh hotels
+                  - listitem [ref=e2969]:
+                    - link "Malacca hotels" [ref=e2973] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/melaka.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2974]: Malacca hotels
+                  - listitem [ref=e2975]:
+                    - link "Port Dickson hotels" [ref=e2979] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/port-dickson.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2980]: Port Dickson hotels
+                  - listitem [ref=e2981]:
+                    - link "Genting Highlands hotels" [ref=e2985] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/genting.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2986]: Genting Highlands hotels
+                  - listitem [ref=e2987]:
+                    - link "George Town hotels" [ref=e2991] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/george-town.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2992]: George Town hotels
+                  - listitem [ref=e2993]:
+                    - link "Lumut hotels" [ref=e2997] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/lumut.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e2998]: Lumut hotels
+                  - listitem [ref=e2999]:
+                    - link "Teluk Bahang hotels" [ref=e3003] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/teluk-bahang.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3004]: Teluk Bahang hotels
+                  - listitem [ref=e3005]:
+                    - link "Shah Alam hotels" [ref=e3009] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/shah-alam.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3010]: Shah Alam hotels
+                  - listitem [ref=e3011]:
+                    - link "Johor Bahru hotels" [ref=e3015] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/johor-bahru.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3016]: Johor Bahru hotels
+                  - listitem [ref=e3017]:
+                    - link "Sekinchan hotels" [ref=e3021] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/sekincan.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3022]: Sekinchan hotels
+                  - listitem [ref=e3023]:
+                    - link "Kundasang hotels" [ref=e3027] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/kampong-kundassan.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3028]: Kundasang hotels
+                  - listitem [ref=e3029]:
+                    - link "Putrajaya hotels" [ref=e3033] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/putrajaya.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3034]: Putrajaya hotels
+                  - listitem [ref=e3035]:
+                    - link "Kuching hotels" [ref=e3039] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/kuching.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3040]: Kuching hotels
+                  - listitem [ref=e3041]:
+                    - link "Pangkor hotels" [ref=e3045] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/pangkor.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3046]: Pangkor hotels
+                  - listitem [ref=e3047]:
+                    - link "Pengkalan Balak hotels" [ref=e3051] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/pengkalan-balak.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3052]: Pengkalan Balak hotels
+                  - listitem [ref=e3053]:
+                    - link "Kuala Kangsar hotels" [ref=e3057] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/kuala-kangsar.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3058]: Kuala Kangsar hotels
+                  - listitem [ref=e3059]:
+                    - link "Bentong hotels" [ref=e3063] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/bentung.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3064]: Bentong hotels
+                  - listitem [ref=e3065]:
+                    - link "Rawang hotels" [ref=e3069] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/rawang.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3070]: Rawang hotels
+                  - listitem [ref=e3071]:
+                    - link "Gemencheh hotels" [ref=e3075] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/gemencheh.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3076]: Gemencheh hotels
+                  - listitem [ref=e3077]:
+                    - link "Ringlet hotels" [ref=e3081] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/ringlet.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3082]: Ringlet hotels
+                  - listitem [ref=e3083]:
+                    - link "Nilai hotels" [ref=e3087] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/kampong-baharu-nilai.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3088]: Nilai hotels
+                  - listitem [ref=e3089]:
+                    - link "Batu Ferringhi hotels" [ref=e3093] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/batu-feringgi.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3094]: Batu Ferringhi hotels
+                  - listitem [ref=e3095]:
+                    - link "Pendang hotels" [ref=e3099] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/pendang.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3100]: Pendang hotels
+                  - listitem [ref=e3101]:
+                    - link "Batu Caves hotels" [ref=e3105] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/my/batu-caves.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                      - generic [ref=e3106]: Batu Caves hotels
+                - button "Show more" [ref=e3108] [cursor=pointer]:
+                  - img [ref=e3111]
+                  - generic [ref=e3113]: Show more
+    - contentinfo [ref=e3127]:
+      - navigation "Quick Links" [ref=e3130]:
+        - list [ref=e3131]:
+          - listitem [ref=e3132]:
+            - link "Countries" [ref=e3133] [cursor=pointer]:
+              - /url: https://www.booking.com/country.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3135]: Countries
+            - text: .
+          - listitem [ref=e3136]:
+            - link "Regions" [ref=e3137] [cursor=pointer]:
+              - /url: https://www.booking.com/region.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3139]: Regions
+            - text: .
+          - listitem [ref=e3140]:
+            - link "Cities" [ref=e3141] [cursor=pointer]:
+              - /url: https://www.booking.com/city.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3143]: Cities
+            - text: .
+          - listitem [ref=e3144]:
+            - link "Districts" [ref=e3145] [cursor=pointer]:
+              - /url: https://www.booking.com/district.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3147]: Districts
+            - text: .
+          - listitem [ref=e3148]:
+            - link "Airports" [ref=e3149] [cursor=pointer]:
+              - /url: https://www.booking.com/airport.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3151]: Airports
+            - text: .
+          - listitem [ref=e3152]:
+            - link "Hotels" [ref=e3153] [cursor=pointer]:
+              - /url: https://www.booking.com/hotel/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3155]: Hotels
+            - text: .
+          - listitem [ref=e3156]:
+            - link "Places of interest" [ref=e3157] [cursor=pointer]:
+              - /url: https://www.booking.com/landmark.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3159]: Places of interest
+            - text: .
+          - listitem [ref=e3160]:
+            - link "Vacation Homes" [ref=e3161] [cursor=pointer]:
+              - /url: https://www.booking.com/booking-home/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3163]: Vacation Homes
+            - text: .
+          - listitem [ref=e3164]:
+            - link "Apartments" [ref=e3165] [cursor=pointer]:
+              - /url: https://www.booking.com/apartments/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3167]: Apartments
+            - text: .
+          - listitem [ref=e3168]:
+            - link "Resorts" [ref=e3169] [cursor=pointer]:
+              - /url: https://www.booking.com/resorts/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3171]: Resorts
+            - text: .
+          - listitem [ref=e3172]:
+            - link "Villas" [ref=e3173] [cursor=pointer]:
+              - /url: https://www.booking.com/villas/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3175]: Villas
+            - text: .
+          - listitem [ref=e3176]:
+            - link "Hostels" [ref=e3177] [cursor=pointer]:
+              - /url: https://www.booking.com/hostels/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3179]: Hostels
+            - text: .
+          - listitem [ref=e3180]:
+            - link "B&Bs" [ref=e3181] [cursor=pointer]:
+              - /url: https://www.booking.com/bed-and-breakfast/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3183]: B&Bs
+            - text: .
+          - listitem [ref=e3184]:
+            - link "Guest Houses" [ref=e3185] [cursor=pointer]:
+              - /url: https://www.booking.com/guest-house/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3187]: Guest Houses
+            - text: .
+          - listitem [ref=e3188]:
+            - link "Unique places to stay" [ref=e3189] [cursor=pointer]:
+              - /url: https://www.booking.com/accommodations.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3191]: Unique places to stay
+            - text: .
+          - listitem [ref=e3192]:
+            - link "All destinations" [ref=e3193] [cursor=pointer]:
+              - /url: https://www.booking.com/destination.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3195]: All destinations
+            - text: .
+          - listitem [ref=e3196]:
+            - link "All flight destinations" [ref=e3197] [cursor=pointer]:
+              - /url: https://www.booking.com/flights/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3199]: All flight destinations
+            - text: .
+          - listitem [ref=e3200]:
+            - link "All car rental locations" [ref=e3201] [cursor=pointer]:
+              - /url: https://www.booking.com/cars/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3203]: All car rental locations
+            - text: .
+          - listitem [ref=e3204]:
+            - link "All vacation destinations" [ref=e3205] [cursor=pointer]:
+              - /url: https://www.booking.com/holidays/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3207]: All vacation destinations
+            - text: .
+          - listitem [ref=e3208]:
+            - link "Guides" [ref=e3209] [cursor=pointer]:
+              - /url: https://www.booking.com/guides/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3211]: Guides
+            - text: .
+          - listitem [ref=e3212]:
+            - link "Discover" [ref=e3213] [cursor=pointer]:
+              - /url: https://www.booking.com/discover.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3215]: Discover
+            - text: .
+          - listitem [ref=e3216]:
+            - link "Discover monthly stays" [ref=e3217] [cursor=pointer]:
+              - /url: https://www.booking.com/extended-stays/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+              - generic [ref=e3219]: Discover monthly stays
+      - generic [ref=e3221]:
+        - generic [ref=e3222]:
+          - heading "Support" [level=3] [ref=e3224]
+          - list [ref=e3225]:
+            - listitem [ref=e3226]:
+              - link "Manage your trips" [ref=e3227] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/cs.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3228]: Manage your trips
+            - listitem [ref=e3229]:
+              - link "Contact Customer Service" [ref=e3230] [cursor=pointer]:
+                - /url: https://secure.booking.com/help.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3231]: Contact Customer Service
+            - listitem [ref=e3232]:
+              - link "Safety Resource Center" [ref=e3233] [cursor=pointer]:
+                - /url: https://www.booking.com/trust_and_safety.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3234]: Safety Resource Center
+        - generic [ref=e3235]:
+          - heading "Discover" [level=3] [ref=e3237]
+          - list [ref=e3238]:
+            - listitem [ref=e3239]:
+              - link "Genius loyalty program" [ref=e3240] [cursor=pointer]:
+                - /url: https://www.booking.com/genius.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3241]: Genius loyalty program
+            - listitem [ref=e3242]:
+              - link "Seasonal and holiday deals" [ref=e3243] [cursor=pointer]:
+                - /url: https://www.booking.com/deals/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3244]: Seasonal and holiday deals
+            - listitem [ref=e3245]:
+              - link "Travel articles" [ref=e3246] [cursor=pointer]:
+                - /url: https://www.booking.com/articles.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3247]: Travel articles
+            - listitem [ref=e3248]:
+              - link "Booking.com for Business" [ref=e3249] [cursor=pointer]:
+                - /url: https://business.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3250]: Booking.com for Business
+            - listitem [ref=e3251]:
+              - link "Traveller Review Awards" [ref=e3252] [cursor=pointer]:
+                - /url: https://www.booking.com/traveller-awards/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3253]: Traveller Review Awards
+            - listitem [ref=e3254]:
+              - link "Car rental" [ref=e3255] [cursor=pointer]:
+                - /url: https://www.booking.com/cars/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3256]: Car rental
+            - listitem [ref=e3257]:
+              - link "Flight finder" [ref=e3258] [cursor=pointer]:
+                - /url: https://booking.com/pxgo?url=https%3A%2F%2Fbooking.kayak.com%2Fin%3Fsid%3D178e14739de13acdb781dba1eac7bb1b%26mc%3DMYR%26bdclc%3Den-us%26p%3Dfooter_link%26a%3Dbdc%252Ffooter_link&lang=en-us&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&token=UmFuZG9tSVYkc2RlIyh9YXOod6xipXL60d6GAE_cXs8Cqk0uRrqpFb53m4OVuew2bC-djyArOvXjzooTmkkr1QaGlzqpDr2F3h4eVWatecSg1sEssikSJiUz3CnK-q6Gq8pzAmqSJfYxAD0gHdO4nRhsB5DcJNarQBKSFAvDTkbgh2hxxZNTgkQYwTtQpu2Fo1kMCSzsTs2enVk5qWPJ2-8i-qY9uou4CPhK57QJmQkt8YU8h8vNuzh3M9n1vSS9pG08A6bx9jttGoJIgOvZ9BMX_3zPo9vqyNtQ5j7iPh8moqXQfurwU58Y5k8F7Effkam4fYyolvg9zuVzykn47SemDyc399-FR_W_5RTWGw9DjhEmw42JkWIpDF-stMafMXa5NA9BilglXkle8EIMbQApwoMGVgODIjF_7axxA-RZbTkxRobv9fKBW8huWLwr-ZEPjYMG-bJkFJdktdpKuL17sVYvtsKR_ImxMWjx3WWKr4-9d7Zwb66DKCLpQdEFnQnrcO8ti8B1tWtPmqCf7BxhNU6QVji0&aid=304142
+                - generic [ref=e3259]: Flight finder
+            - listitem [ref=e3260]:
+              - link "Restaurant reservations" [ref=e3261] [cursor=pointer]:
+                - /url: https://www.opentable.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&ref=16087
+                - generic [ref=e3262]: Restaurant reservations
+            - listitem [ref=e3263]:
+              - link "Booking.com for Travel Agents" [ref=e3264] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b&utm_campaign=booking-footer&utm_content=travel-agents-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e3265]: Booking.com for Travel Agents
+        - generic [ref=e3266]:
+          - heading "Terms and settings" [level=3] [ref=e3268]
+          - list [ref=e3269]:
+            - listitem [ref=e3270]:
+              - link "Privacy Notice" [ref=e3271] [cursor=pointer]:
+                - /url: https://www.booking.com/content/privacy.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3272]: Privacy Notice
+            - listitem [ref=e3273]:
+              - link "Terms of Service" [ref=e3274] [cursor=pointer]:
+                - /url: https://www.booking.com/content/terms.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3275]: Terms of Service
+            - listitem [ref=e3276]:
+              - link "Accessibility Statement" [ref=e3277] [cursor=pointer]:
+                - /url: https://www.booking.com/content/accessibility_statement.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3278]: Accessibility Statement
+            - listitem [ref=e3279]:
+              - link "Partner dispute" [ref=e3280] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/complaints.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3281]: Partner dispute
+            - listitem [ref=e3282]:
+              - link "Modern Slavery Statement" [ref=e3283] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/modern-slavery-statement/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e3284]: Modern Slavery Statement
+            - listitem [ref=e3285]:
+              - link "Human Rights Statement" [ref=e3286] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/about/compliance-and-ethics/human-rights/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e3287]: Human Rights Statement
+        - generic [ref=e3288]:
+          - heading "Partners" [level=3] [ref=e3290]
+          - list [ref=e3291]:
+            - listitem [ref=e3292]:
+              - link "Extranet login" [ref=e3293] [cursor=pointer]:
+                - /url: https://admin.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b&utm_campaign=login_footer_v0&utm_medium=frontend&utm_source=extranet_login_footer
+                - generic [ref=e3294]: Extranet login
+            - listitem [ref=e3295]:
+              - link "Partner help" [ref=e3296] [cursor=pointer]:
+                - /url: https://partner.booking.com/en-us?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b&utm_campaign=footer_list&utm_medium=frontend_footer&utm_source=booking.com
+                - generic [ref=e3297]: Partner help
+            - listitem [ref=e3298]:
+              - link "List your property" [ref=e3299] [cursor=pointer]:
+                - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&lang=en-us&sid=178e14739de13acdb781dba1eac7bb1b&utm_medium=frontend&utm_source=footer_menu
+                - generic [ref=e3300]: List your property
+            - listitem [ref=e3301]:
+              - link "Become an affiliate" [ref=e3302] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b&utm_campaign=booking-footer&utm_content=become-an-affiliate-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e3303]: Become an affiliate
+        - generic [ref=e3304]:
+          - heading "About" [level=3] [ref=e3306]
+          - list [ref=e3307]:
+            - listitem [ref=e3308]:
+              - link "About Booking.com" [ref=e3309] [cursor=pointer]:
+                - /url: https://www.booking.com/content/about.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3310]: About Booking.com
+            - listitem [ref=e3311]:
+              - link "How We Work" [ref=e3312] [cursor=pointer]:
+                - /url: https://www.booking.com/content/how_we_work.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3313]: How We Work
+            - listitem [ref=e3314]:
+              - link "Sustainability" [ref=e3315] [cursor=pointer]:
+                - /url: https://sustainability.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e3316]: Sustainability
+            - listitem [ref=e3317]:
+              - link "Press center" [ref=e3318] [cursor=pointer]:
+                - /url: https://globalnews.booking.com/?aid=304142&lang=en
+                - generic [ref=e3319]: Press center
+            - listitem [ref=e3320]:
+              - link "Careers" [ref=e3321] [cursor=pointer]:
+                - /url: https://careers.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e3322]: Careers
+            - listitem [ref=e3323]:
+              - link "Investor relations" [ref=e3324] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ
+                - generic [ref=e3325]: Investor relations
+            - listitem [ref=e3326]:
+              - link "Corporate contact" [ref=e3327] [cursor=pointer]:
+                - /url: https://www.booking.com/content/contact-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3328]: Corporate contact
+            - listitem [ref=e3329]:
+              - link "Content guidelines and reporting" [ref=e3330] [cursor=pointer]:
+                - /url: https://www.booking.com/content-moderation-policy/overview-page.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaKEBiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuAKJlrzSBsACAdICJDQwYTkzOTRlLWU4Y2YtNGE3Mi1hNTlkLWMyNTQ2ZjYxMGE4ZNgCAeACAQ&sid=178e14739de13acdb781dba1eac7bb1b
+                - generic [ref=e3331]: Content guidelines and reporting
+      - generic [ref=e3333]:
+        - generic [ref=e3334]:
+          - 'button "Language: English (US)" [ref=e3336] [cursor=pointer]'
+          - button "Prices in Malaysian Ringgit" [ref=e3341] [cursor=pointer]:
+            - generic [ref=e3342]: MYR
+        - separator [ref=e3343]
+        - generic [ref=e3344]:
+          - generic [ref=e3346]: Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.
+          - generic [ref=e3347]: Copyright © 1996–2026 Booking.com™. All rights reserved.
+        - generic [ref=e3348]:
+          - img "Booking.com" [ref=e3349]:
+            - img [ref=e3350]
+          - img "Priceline.com" [ref=e3352]:
+            - img [ref=e3353]
+          - img "Kayak" [ref=e3356]:
+            - img [ref=e3357]
+          - img "Agoda" [ref=e3371]:
+            - img [ref=e3372]
+          - img "OpenTable" [ref=e3380]:
+            - img [ref=e3381]
+```
+
+# Test source
+
+```ts
+  156 |   // shifts between data-testid, id="ss", and plain placeholder text
+  157 |   // depending on region/experiment. First one that appears wins.
+  158 |   const destinationCandidates = [
+  159 |     page.locator('input#ss'),
+  160 |     page.getByPlaceholder(/where are you going/i),
+  161 |     page.getByTestId('destination-container').getByRole('combobox'),
+  162 |     page.locator('[name="ss"]'),
+  163 |   ];
+  164 | 
+  165 |   let destinationInput = destinationCandidates[0];
+  166 |   let found = false;
+  167 |   for (const candidate of destinationCandidates) {
+  168 |     if (await candidate.first().isVisible({ timeout: 3000 }).catch(() => false)) {
+  169 |       destinationInput = candidate.first();
+  170 |       found = true;
+  171 |       break;
+  172 |     }
+  173 |   }
+  174 |   if (!found) {
+  175 |     // Surface a screenshot + page dump before failing, to make diagnosis easier
+  176 |     await page.screenshot({ path: 'test-results/destination-not-found.png', fullPage: true });
+  177 |     throw new Error(
+  178 |       'Could not locate the destination search input with any known selector. ' +
+  179 |       'Run `npx playwright codegen https://www.booking.com` to find the current one, ' +
+  180 |       'or check test-results/destination-not-found.png.'
+  181 |     );
+  182 |   }
+  183 | 
+  184 |   await robustClick(page, destinationInput);
+  185 |   await destinationInput.fill(destination);
+  186 | 
+  187 |   // Select the first autocomplete suggestion. Rather than depending on an
+  188 |   // exact suggestion-item selector (which changes often), use the keyboard —
+  189 |   // booking.com's autocomplete listbox supports arrow-down + enter.
+  190 |   await page.waitForTimeout(800); // let suggestions render
+  191 |   await destinationInput.press('ArrowDown');
+  192 |   await destinationInput.press('Enter');
+  193 | 
+  194 |   // --- Dates ---
+  195 |   // On the current booking.com UI, after picking a destination the whole
+  196 |   // search widget collapses into a single compact summary button
+  197 |   // (data-testid="search-overview", e.g. "Kuala Lumpur, 9 Jul - 16 Jul").
+  198 |   // Clicking it opens a "Select dates" panel (data-testid="search-dates-close"
+  199 |   // on its close button) containing the calendar. Each day is rendered as
+  200 |   // <span role="checkbox" data-date="YYYY-MM-DD" aria-label="Monday, 10 August 2026">
+  201 |   // inside a <td role="gridcell">, and a data-testid="sb-dates-apply" button
+  202 |   // confirms the selected range.
+  203 |   const searchOverviewTrigger = page.getByTestId('search-overview');
+  204 |   if (await searchOverviewTrigger.isVisible({ timeout: 3000 }).catch(() => false)) {
+  205 |     await robustClick(page, searchOverviewTrigger);
+  206 |     await page.waitForTimeout(500); // let the overlay/sheet finish opening
+  207 | 
+  208 |     // The search-overview button appears to open an intermediate overlay
+  209 |     // with separate destination/dates/guests sub-fields (mirroring the old
+  210 |     // 3-field layout), rather than jumping straight to the calendar. Try a
+  211 |     // handful of likely triggers for the "dates" sub-field within it.
+  212 |     if (!(await page.locator('[data-date]').first().isVisible({ timeout: 2000 }).catch(() => false))) {
+  213 |       const dateSubTriggerCandidates = [
+  214 |         page.getByTestId('searchbox-dates-container'),
+  215 |         page.getByTestId('search-dates'),
+  216 |         page.getByRole('button', { name: /\d{1,2}\s+\w{3}\s*[-–]\s*\d{1,2}\s+\w{3}/ }), // e.g. "9 Jul - 16 Jul"
+  217 |         page.getByRole('button', { name: /check[- ]?in/i }),
+  218 |       ];
+  219 |       let subTriggerFound = false;
+  220 |       for (const candidate of dateSubTriggerCandidates) {
+  221 |         if (await candidate.first().isVisible({ timeout: 2000 }).catch(() => false)) {
+  222 |           await robustClick(page, candidate.first());
+  223 |           subTriggerFound = true;
+  224 |           break;
+  225 |         }
+  226 |       }
+  227 |       if (!subTriggerFound) {
+  228 |         // Dump the intermediate overlay so we can see what sub-fields it
+  229 |         // actually contains, in case none of the guessed candidates matched
+  230 |         const overlayHtml = await page.content();
+  231 |         const fs = await import('fs');
+  232 |         await fs.promises.mkdir('test-results', { recursive: true }).catch(() => {});
+  233 |         await fs.promises
+  234 |           .writeFile('test-results/overlay-after-search-overview-click.html', overlayHtml)
+  235 |           .catch(() => {});
+  236 |       }
+  237 |     }
+  238 |   } else {
+  239 |     // Fall back to the older separate dates-button UI, in case this run
+  240 |     // landed on that variant instead
+  241 |     const datesButton = page.getByTestId('searchbox-dates-container');
+  242 |     if (await datesButton.isVisible().catch(() => false)) {
+  243 |       await robustClick(page, datesButton);
+  244 |     }
+  245 |   }
+  246 | 
+  247 |   // Wait for the "Select dates" panel to actually render before looking for
+  248 |   // day cells inside it — this is what previous attempts were missing.
+  249 |   const datesPanelReady = page.locator('[data-date]').first();
+  250 |   if (!(await datesPanelReady.isVisible({ timeout: 10000 }).catch(() => false))) {
+  251 |     await page.screenshot({ path: 'test-results/calendar-not-visible.png', fullPage: true });
+  252 |     const html = await page.content();
+  253 |     const fs = await import('fs');
+  254 |     await fs.promises.mkdir('test-results', { recursive: true }).catch(() => {});
+  255 |     await fs.promises.writeFile('test-results/panel-after-search-overview.html', html).catch(() => {});
+> 256 |     throw new Error(
+      |           ^ Error: The "Select dates" panel did not render any [data-date] cells within 10s of clicking the search-overview trigger. Check test-results/calendar-not-visible.png and test-results/panel-after-search-overview.html.
+  257 |       'The "Select dates" panel did not render any [data-date] cells within 10s of clicking ' +
+  258 |       'the search-overview trigger. Check test-results/calendar-not-visible.png and ' +
+  259 |       'test-results/panel-after-search-overview.html.'
+  260 |     );
+  261 |   }
+  262 | 
+  263 |   await selectCalendarDate(page, checkIn);
+  264 |   await selectCalendarDate(page, checkOut);
+  265 | 
+  266 |   // Confirm the date range
+  267 |   const applyDatesButton = page.getByTestId('sb-dates-apply');
+  268 |   if (await applyDatesButton.isVisible({ timeout: 3000 }).catch(() => false)) {
+  269 |     await robustClick(page, applyDatesButton);
+  270 |   }
+  271 | 
+  272 |   // --- Occupancy (adults) ---
+  273 | 
+  274 |   const occupancyTrigger = page.getByTestId('occupancy-config');
+  275 |   if (!(await occupancyTrigger.isVisible({ timeout: 5000 }).catch(() => false))) {
+  276 |     await page.screenshot({ path: 'test-results/occupancy-not-found.png', fullPage: true });
+  277 |     throw new Error(
+  278 |       'Could not find the occupancy/guests control (data-testid="occupancy-config"). ' +
+  279 |       'Check test-results/occupancy-not-found.png or re-record with npx playwright codegen.'
+  280 |     );
+  281 |   }
+  282 |   await robustClick(page, occupancyTrigger);
+  283 | 
+  284 |   const adultsInput = page.getByTestId('occupancy-adults');
+  285 |   const currentAdultsText = await adultsInput.textContent();
+  286 |   const currentAdults = parseInt(currentAdultsText ?? '2', 10);
+  287 | 
+  288 |   const diff = adults - currentAdults;
+  289 |   if (diff > 0) {
+  290 |     const increaseBtn = page.getByTestId('occupancy-adults-increase-button');
+  291 |     for (let i = 0; i < diff; i++) {
+  292 |       await increaseBtn.click();
+  293 |     }
+  294 |   } else if (diff < 0) {
+  295 |     const decreaseBtn = page.getByTestId('occupancy-adults-decrease-button');
+  296 |     for (let i = 0; i < Math.abs(diff); i++) {
+  297 |       await decreaseBtn.click();
+  298 |     }
+  299 |   }
+  300 | 
+  301 |   // Close occupancy panel
+  302 |   await robustClick(page, page.getByTestId('occupancy-config'));
+  303 | 
+  304 |   // --- Submit search ---
+  305 |   await robustClick(page, page.getByRole('button', { name: /^Search$/i }));
+  306 | 
+  307 |   // Wait for results page to load
+  308 |   await expect(page).toHaveURL(/searchresults/);
+  309 |   await page.getByTestId('property-card').first().waitFor({ state: 'visible', timeout: 20000 });
+  310 | }
+```
